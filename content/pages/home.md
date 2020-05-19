@@ -8,4 +8,4 @@ meta:
   description: 'UK Based Photographer, somewhat legend, somewhat hero.'
   title: James Malone Photographer
 ---
-remove required field
+
