@@ -99,7 +99,7 @@ collections: # A list of collections the CMS should be able to edit
                 }
 
       - file: 'content/pages/blog.md'
-        label: 'Blog Page'
+        label: 'Recent Projects Page'
         name: 'blog-page'
         fields:
           - {
@@ -209,7 +209,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Featured Image, name: featuredImage, widget: image }
           - { label: Subtitle, name: subtitle, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown, required: false }
-          - label: 'Gallery'
+          - label: 'Slider'
             name: 'gallery'
             widget: 'list'
             fields:
