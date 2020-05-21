@@ -107,6 +107,10 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: GalleryPage,
             }
+          - { label: Title, name: title, widget: string }
+          - { label: Featured Image, name: featuredImage, widget: image }
+          - { label: Subtitle, name: subtitle, widget: markdown, required: false }
+          - { label: Body, name: body, widget: markdown, required: false }  
           - label: 'Gallery'
             name: 'gallery'
             widget: 'list'
@@ -114,7 +118,7 @@ collections: # A list of collections the CMS should be able to edit
               - { name: image, label: Image, widget: image }
               - { name: alt, label: Alt, widget: string }
               - { name: title, label: Title, widget: string, required: false }     
-                   
+
       - file: 'content/pages/blog.md'
         label: 'Recent Projects Page'
         name: 'blog-page'

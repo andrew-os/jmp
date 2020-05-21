@@ -33,11 +33,11 @@ const GalleryPage = ({ data: { page } }) => (
 export default GalleryPage
 
 export const pageQuery = graphql`
-  ## Query for HomePage data
+  ## Query for GalleryPage data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query HomePage($id: String!) {
+  query GalleryPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       ...Meta
       html
