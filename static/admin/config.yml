@@ -396,6 +396,24 @@ collections: # A list of collections the CMS should be able to edit
               widget: text,
               required: false,
             }
+          - {
+              label: Logo,
+              name: logo,
+              widget: image,
+              required: false,
+            }
+          - {
+              label: Phone,
+              name: phone,
+              widget: string,
+              required: false,
+            } 
+          - {
+              label: Email,
+              name: email,
+              widget: string,
+              required: false,
+            } 
           - label: Social Media Card
             name: socialMediaCard
             widget: object
@@ -407,3 +425,4 @@ collections: # A list of collections the CMS should be able to edit
               widget: string,
               required: false,
             }
+
