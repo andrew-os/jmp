@@ -10,15 +10,15 @@
 .Nav--Container {
   display: flex;
   align-items: center;
-  height: 6rem;
+  /* height: 6rem; */
 }
 
-.Nav--Links {
+/* .Nav--Links {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-}
+} */
 
 .Nav--Links > * + * {
   margin-left: 1rem;
@@ -29,9 +29,9 @@
   position: relative;
 }
 
-.Nav--MenuButton {
+/* .Nav--MenuButton {
   display: none !important;
-}
+} */
 
 .NavLink {
   padding: 0.5rem 1rem;
@@ -103,13 +103,13 @@
   width: 15rem;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) { */
   .Nav--Container {
     display: flex;
   }
 
   .Nav--MenuButton {
-    display: block !important;
+    display: block ;
     margin-left: auto;
     z-index: 1;
   }
@@ -184,7 +184,9 @@
     font-size: 1.5rem;
     width: auto;
   }
-}
+/* } */
+
+/*Desktop Nav */
 
 @keyframes Nav--Link {
   from {
