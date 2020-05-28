@@ -112,6 +112,9 @@
     display: block ;
     margin-left: auto;
     z-index: 1;
+    position: absolute;
+    right: 35px;
+    top: 35px;
   }
   .Nav .Logo {
     z-index: 1;
@@ -204,3 +207,21 @@
     opacity: 0;
   }
 }
+
+/* Nav button shape */
+.nav-btn-cont{
+  color: #fff;
+  height: 228px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 228px;
+  z-index: 14;
+}
+.nav-btn-bg{
+  background-color: #000;
+  height: 100%; width: 100%;
+  transform: rotate(45deg) translateY(-71%);
+}
+
