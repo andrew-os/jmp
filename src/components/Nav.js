@@ -51,7 +51,7 @@ export class Navigation extends Component {
             <div class="inner-cont-w">
               <div class="container">
                 <div class="row">
-                  <nav className={`Nav ${active ? 'Nav-active' : ''}`}>
+                  <nav className={`Nav ${active ? 'Nav-active' : ''} lg:gr-5 gr-12`}>
                     <div className="Nav--Container container">
                       <Link to="/" onClick={this.handleLinkClick}>
                         <Logo />
@@ -97,9 +97,16 @@ export class Navigation extends Component {
                       </div>
 
                     </div>
-              </nav>
-                
+                  </nav>
+                  <div className="lg:gr-4 gr-12 contact">
+                  
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div className="line-w">
+              <div className="line-inner-w">
+                <div className="line"></div>
               </div>
             </div>
           </div>
