@@ -3,8 +3,15 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 4rem;
-  width: 4rem;
+  height: 140px;
+  width: 843px;
   align-items: center;
   justify-content: center;
+}
+
+@media only screen and (max-width: 681px){
+  .Logo{
+    width: 341px;
+    height:54px;
+  }
 }
