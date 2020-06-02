@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
-import { Menu, X } from 'react-feather'
 import Logo from './Logo'
 
 import './Nav.css'
@@ -44,19 +43,19 @@ export class Navigation extends Component {
 
     return (
       <div class="nav-layout">
-        <div class="nav-cont">
+        <div className={`Nav ${active ? 'Nav-active' : ''} nav-cont`}>
           <div class="bg-w"></div>
-          <div clas="inner-cont">
-            <div class="logo-w"></div>
+          <div class="inner-cont">
+            <div class="logo-w">
+              <Link to="/" onClick={this.handleLinkClick}>
+                <Logo />
+              </Link>
+            </div>
             <div class="inner-cont-w">
               <div class="container">
-                <div class="row">
-                  <nav className={`Nav ${active ? 'Nav-active' : ''} lg:gr-5 gr-12`}>
-                    <div className="Nav--Container container">
-                      <Link to="/" onClick={this.handleLinkClick}>
-                        <Logo />
-                      </Link>
-                      <div className="Nav--Links">
+                <div class="row row-align-btween">
+                  <nav class="lg:gr-5 gr-12">
+                    
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/components/">Components</NavLink>
                         <NavLink to="/gallery/">Gallery</NavLink>
@@ -94,9 +93,9 @@ export class Navigation extends Component {
                         </div>
                         <NavLink to="/default/">Default</NavLink>
                         <NavLink to="/contact/">Contact</NavLink>
-                      </div>
+                      
 
-                    </div>
+                    
                   </nav>
                   <div className="lg:gr-4 gr-12 contact">
                   
@@ -114,10 +113,13 @@ export class Navigation extends Component {
         </div>
         <div class="nav-btn-cont">
           <button
-          className="Button-blank Nav--MenuButton"
+          className={`Button-blank Nav--MenuButton hamburger ${active ? 'is-active' : ''}`}
+          type="button"
           onClick={this.handleMenuToggle}
           >
-          {active ? <X /> : <Menu />}
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
           <div class="nav-btn-bg"></div>
         </div>

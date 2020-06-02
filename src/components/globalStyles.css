@@ -255,8 +255,11 @@ blockquote {
   padding-left: 0;
   padding-right: 0;
 }
+.row-align-btween{
+  justify-content: space-between;
+}
 .gr-0, .gr-1, .gr-2, .gr-3, .gr-4, .gr-5, .gr-6, .gr-7, .gr-8, .gr-9, .gr-10, .gr-11, .gr-12{
-  display: block;
+
   flex: 0 0 auto;
   flex-direction: column;
   box-sizing: border-box;
@@ -316,19 +319,10 @@ blockquote {
 }
 
 /* Medium Screens */
-@media screen and (min-width: 769px){
-  .row{
-    margin-left: -34px;
-    margin-right:-34px;
-  }
-  .gr-0, .gr-1, .gr-2, .gr-3, .gr-4, .gr-5, .gr-6, .gr-7, .gr-8, .gr-9, .gr-10, .gr-11, .gr-12{
-    padding-left: 34px;
-    padding-right: 34px;
-  }
-}
+
 
 /*Large Screens */
-@media screen and (min-width: 1280px){
+
   .lg\:gr-1{
     flex-basis: 8.33333%;
     max-width: 8.33333%;
@@ -374,6 +368,22 @@ blockquote {
     max-width: 91.66667%;
   }
   .lg\:gr-12{
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  @media only screen and (min-width: 769px){
+    .row{
+      margin-left: -34px;
+      margin-right:-34px;
+    }
+    .gr-0, .gr-1, .gr-2, .gr-3, .gr-4, .gr-5, .gr-6, .gr-7, .gr-8, .gr-9, .gr-10, .gr-11, .gr-12{
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  }
+
+@media only screen and (max-width: 680px){
+  .gr-12 {
     flex-basis: 100%;
     max-width: 100%;
   }
