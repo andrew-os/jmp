@@ -218,6 +218,10 @@
   }
 }
 
+.Nav .container{
+  padding-top: 85px;
+}
+
 .nav-cont{
   height: 0%;
   left: 0;
@@ -340,14 +344,19 @@
   opacity: 0;
 }
 
+
 .logo-w {
-  height: 103px;
-  left: 65px;
+  height: 140px;
+  left: 0;
   position: fixed;
-  top: 40px;
-  width: 189px;
+  top: 0px;
+  width: 100%;
   z-index:11;
 } 
+
+.Nav-active .logo-w{
+  height: 183px;
+}
 /* MOBILE ONLY */
 @media only screen and (max-width: 768px){
 .NavLink:hover,

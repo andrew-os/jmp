@@ -237,7 +237,7 @@ blockquote {
 .container{
   margin: 0 auto;
   max-width: 1372px;
-  width: calc(100% - 130px);
+  /* width: calc(100% - 130px); */
 }
 @media screen and (min-width: 1280px){
   .container{

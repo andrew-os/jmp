@@ -7,6 +7,11 @@
   width: 843px;
   align-items: center;
   justify-content: center;
+  opacity: 1;
+}
+
+.Nav-active .Logo{
+  opacity: 0;
 }
 
 @media only screen and (max-width: 681px){

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import Logo from './Logo'
+import NavLogo from './NavLogo'
 
 import './Nav.css'
 
@@ -48,7 +49,7 @@ export class Navigation extends Component {
           <div class="inner-cont">
             <div class="logo-w">
               <Link to="/" onClick={this.handleLinkClick}>
-                <Logo />
+                {active ? <NavLogo /> : <Logo />}
               </Link>
             </div>
             <div class="inner-cont-w">

@@ -1,4 +1,9 @@
 .Logo--Nav{
-    height:183px;
-    width: 103px;
+    height: 183px;
+    width: 100%;
+    opacity: 0;
+}
+
+.Nav-active .Logo--Nav{
+    opacity:1;
 }
