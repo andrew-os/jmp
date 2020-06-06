@@ -232,7 +232,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: Subtitle, name: subtitle, widget: markdown, required: false }
           - { label: Body, name: body, widget: markdown, required: false }
           - label: 'Slider'
-            name: 'gallery'
+            name: 'slidegallery'
             widget: 'list'
             fields:
               - { name: image, label: Image, widget: image }
