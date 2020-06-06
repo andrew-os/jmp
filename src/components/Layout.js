@@ -51,7 +51,7 @@ export default ({ children, meta, title }) => {
                 })
               : false
           }
-
+          console.log(email, phone)
         return (
           <Fragment>
             <Helmet
@@ -76,9 +76,9 @@ export default ({ children, meta, title }) => {
             />
 
 
-            <Nav phone={phone} email={email} subNav={subNav} />
-            
-            <div class="container">
+            <Nav hello="hello" phone={phone} email={email} subNav={subNav} />
+          
+            <div className="container">
               <Fragment>{children}</Fragment>
             </div>
               

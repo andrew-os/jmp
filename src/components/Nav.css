@@ -356,6 +356,39 @@
 
 .Nav-active .logo-w{
   height: 183px;
+  max-width: 189px;
+  left: 34px;
+}
+.contact{
+  align-self:center;
+}
+.nav-camera-cta{
+  z-index: 15;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+.camera{
+  width: 372px;
+  height: 356px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+}
+.camera-w{
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
 }
 /* MOBILE ONLY */
 @media only screen and (max-width: 768px){

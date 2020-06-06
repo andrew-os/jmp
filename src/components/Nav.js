@@ -3,6 +3,7 @@ import { Location } from '@reach/router'
 import { Link } from 'gatsby'
 import Logo from './Logo'
 import NavLogo from './NavLogo'
+import CameraLogo from './CameraLogo'
 
 import './Nav.css'
 
@@ -41,21 +42,22 @@ export class Navigation extends Component {
           {children}
         </Link>
       )
-
+      
+      
     return (
-      <div class="nav-layout">
+      <div className="nav-layout">
         <div className={`Nav ${active ? 'Nav-active' : ''} nav-cont`}>
-          <div class="bg-w"></div>
-          <div class="inner-cont">
-            <div class="logo-w">
+          <div className="bg-w"></div>
+          <div className="inner-cont">
+            <div className="logo-w">
               <Link to="/" onClick={this.handleLinkClick}>
                 {active ? <NavLogo /> : <Logo />}
               </Link>
             </div>
-            <div class="inner-cont-w">
-              <div class="container">
-                <div class="row row-align-btween">
-                  <nav class="lg:gr-5 gr-12">
+            <div className="inner-cont-w">
+              <div className="container">
+                <div className="row row-align-btween">
+                  <nav className="lg:gr-5 gr-12">
                     
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/components/">Components</NavLink>
@@ -100,8 +102,8 @@ export class Navigation extends Component {
                   </nav>
                   <div className="lg:gr-4 gr-12 contact">
                     <div className="contact-w">
-                        <p>{email}</p>
                         <p>{phone}</p>
+                        <p>{email}</p>
                     </div>
                   </div>
                 </div>
@@ -112,35 +114,35 @@ export class Navigation extends Component {
                 <div className="line"></div>
               </div>
             </div>
-            <div class="nav-footer">
+            <div className="nav-footer">
             
             </div>
           </div>
-          <div class="nav-camera-cta">
-              <div class="camera">
-                  <div class="camera-w">
-                      
+          <div className="nav-camera-cta">
+              <div className="camera">
+                  <div className="camera-w">
+                      <CameraLogo />
                   </div>
               </div>
           </div>
         </div>
-        <div class="nav-btn-cont">
+        <div className="nav-btn-cont">
           <button
           className={`Button-blank Nav--MenuButton hamburger ${active ? 'is-active' : ''}`}
           type="button"
           onClick={this.handleMenuToggle}
           >
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
             </span>
           </button>
-          <div class="nav-btn-bg"></div>
+          <div className="nav-btn-bg"></div>
         </div>
       </div>
     )
   }
 }
 
-export default ({ subNav }) => (
-  <Location>{route => <Navigation subNav={subNav} {...route} />}</Location>
+export default ({ subNav, email, phone }) => (
+  <Location>{route => <Navigation email={email} phone={phone} subNav={subNav} {...route} />}</Location>
 )
