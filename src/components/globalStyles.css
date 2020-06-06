@@ -183,11 +183,7 @@ blockquote {
   }
 }
 
-.container {
-  max-width: 1111px;
-  width: 90%;
-  margin: 0 auto;
-}
+
 .container.skinny {
   max-width: 888px;
 }
@@ -237,24 +233,50 @@ blockquote {
 .container{
   margin: 0 auto;
   max-width: 1372px;
+  width: 100%;
   /* width: calc(100% - 130px); */
 }
-@media screen and (min-width: 1280px){
+/* tablet */
+@media screen and (min-width: 1000px){
   .container{
-    max-width: 100%;
+    max-width: 960px;
+  }
+}
+/* Sml laptop */
+@media screen and (min-width: 1220px){
+  .container{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
   }
   
+}
+/* Lrg Laptop */
+@media screen and (min-width: 1440px){
+  .container{
+    width: 100%;
+    max-width: 1372px;
+  }
+}
+/* Pc Monitor */
+@media screen and (min-width: 1600px){
+
+}
+/* 4K */
+@media screen and (min-width: 2100px){
+
 }
 .row{
   display: flex;
   flex: 0 1 auto;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: -34px;
-  margin-right: -34px;
+  margin-left: -20px;
+  margin-right: -20px;
   padding-left: 0;
   padding-right: 0;
 }
+
 .row-align-btween{
   justify-content: space-between;
 }
