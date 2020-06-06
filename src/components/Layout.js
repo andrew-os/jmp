@@ -18,6 +18,8 @@ export default ({ children, meta, title }) => {
             siteTitle
             siteDescription
             googleTrackingId
+            email
+            phone
             socialMediaCard {
               image
             }
@@ -40,7 +42,7 @@ export default ({ children, meta, title }) => {
         }
       `}
       render={data => {
-        const { siteTitle, socialMediaCard, googleTrackingId } =
+        const { siteTitle, email, phone, socialMediaCard, googleTrackingId } =
             data.settingsYaml || {},
           subNav = {
             posts: data.allPosts.hasOwnProperty('edges')
@@ -74,7 +76,7 @@ export default ({ children, meta, title }) => {
             />
 
 
-            <Nav subNav={subNav} />
+            <Nav phone={phone} email={email} subNav={subNav} />
             
             <div class="container">
               <Fragment>{children}</Fragment>

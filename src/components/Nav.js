@@ -28,7 +28,7 @@ export class Navigation extends Component {
 
   render() {
     const { active } = this.state,
-      { subNav } = this.props,
+      { subNav, email, phone } = this.props,
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}
@@ -99,7 +99,10 @@ export class Navigation extends Component {
                     
                   </nav>
                   <div className="lg:gr-4 gr-12 contact">
-                  
+                    <div className="contact-w">
+                        <p>{email}</p>
+                        <p>{phone}</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -109,8 +112,17 @@ export class Navigation extends Component {
                 <div className="line"></div>
               </div>
             </div>
+            <div class="nav-footer">
+            
+            </div>
           </div>
-        
+          <div class="nav-camera-cta">
+              <div class="camera">
+                  <div class="camera-w">
+                      
+                  </div>
+              </div>
+          </div>
         </div>
         <div class="nav-btn-cont">
           <button
