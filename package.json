@@ -52,7 +52,8 @@
     "react-feather": "^2.0.3",
     "react-helmet": "^5.2.1",
     "react-markdown": "^4.2.2",
-    "react-photoswipe": "^1.3.0"
+    "react-photoswipe": "^1.3.0",
+    "sharp": "^0.25.3"
   },
   "keywords": [
     "gatsby"

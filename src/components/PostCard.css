@@ -7,6 +7,7 @@
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-in-out;
   overflow: hidden;
+  margin-bottom: 37px;
 }
 
 .PostCard:hover,
@@ -18,7 +19,7 @@
 .PostCard--Image {
   margin: 0 0 2rem 0;
   width: 100%;
-  height: 15rem;
+  height: 20rem;
 }
 
 .PostCard--Title {

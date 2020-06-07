@@ -421,6 +421,29 @@
   box-shadow: 0 0 0 1px rgba(9,16,8,.5);
 }
 
+/* Nav footer */
+.nav-footer{
+  display: flex;
+  left: 34px;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 35px 0px;
+  position: absolute;
+  width: 100%;
+}
+
+.nav-footer svg{
+  fill: #000;
+  margin-right: 26px;
+}
+
+@media only screen and (min-width: 1200px){
+  .nav-footer svg{
+    width: 64px;
+    height:73px;
+  }
+}
+
 
 /* MOBILE ONLY */
 @media only screen and (max-width: 768px){

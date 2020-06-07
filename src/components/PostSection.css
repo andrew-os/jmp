@@ -25,19 +25,19 @@
 
 .PostSection--Grid > * {
   width: calc(33.33% - 2rem);
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
 }
 
 @supports (display: grid) {
   .PostSection--Grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 4rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.5rem;
   }
 
   .PostSection--Grid > * {
     width: auto;
-    margin: 0;
+    /* margin: 0; */
   }
 }
 
