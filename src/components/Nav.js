@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faIntstagram } from '@fortawesome/free-brands-svg-icons'
 import Logo from './Logo'
 import NavLogo from './NavLogo'
 import CameraLogo from './CameraLogo'
@@ -115,7 +118,8 @@ export class Navigation extends Component {
               </div>
             </div>
             <div className="nav-footer">
-            
+                <FontAwesomeIcon icon={faIntstagram} />
+                <FontAwesomeIcon icon={faEnvelope} />
             </div>
           </div>
           <div className="nav-camera-cta">
