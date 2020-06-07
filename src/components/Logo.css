@@ -19,6 +19,10 @@
   height: 156px;
   margin-right: 0;
 }
+.icon--camera{
+  width: 223px;
+  height: 156px;
+}
 @media only screen and (max-width: 681px){
   .Logo{
     width: 341px;

@@ -385,11 +385,43 @@
   position: relative;
 }
 .camera-w{
-  left: 50%;
+  /* left: 50%; */
+  position: absolute;
+  /* top: 0; */
+  transform: translate(0, 50%);
+}
+.line-w{
+  height: 0;
+  left: calc(50vw - 50vh);
+  opacity: .6;
   position: absolute;
   top: 0;
-  transform: translate(0, -50%);
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 150vh;
 }
+.line-inner-w{
+  color: rgb(0, 0, 0);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.line{
+  margin: 0 auto;
+  transform-origin: center;
+  opacity: 0;
+  transform: translate(-100%, 0%) matrix(1, 0, 0, 1, 0, 0);
+}
+.Nav-active .line-inner-w{
+  color: rgb(0, 0, 255);
+  transform: matrix(1, 0, 0, 1, 0, 0);
+}
+.Nav-active .line{
+  width: 100%;
+  transform: matrix(1, 0, 0, 1, 0, 0);
+  opacity: 1;
+  box-shadow: 0 0 0 1px rgba(9,16,8,.5);
+}
+
+
 /* MOBILE ONLY */
 @media only screen and (max-width: 768px){
 .NavLink:hover,

@@ -6,6 +6,6 @@ export default () => (
     className="Logo--Camera"
 
     >
-    <img src={CameraIcon} />
+    <img className="icon icon--camera" src={CameraIcon} />
     </div>
 )
