@@ -5,10 +5,8 @@ status: Published
 date: '2018-05-25'
 featuredImage: 'https://ucarecdn.com/37815509-b8ed-415b-a4bb-164b24b32881/'
 excerpt: >-
-  This is placeholder text that our web designers put here to make sure words
-  appear properly on your website. This text is going to be replaced once the
-  website is completed. You are currently reading text that is written in
-  English, not any other language.
+  Sed non dui diam. Quisque lectus est, lobortis ac efficitur vitae, posuere a
+  mauris. 
 meta:
   description: test meta description
   title: test meta title
