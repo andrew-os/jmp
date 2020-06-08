@@ -4,11 +4,7 @@ title: Project 6
 status: Published
 date: '2018-05-25'
 featuredImage: 'https://ucarecdn.com/3ff2cf75-ea12-4f2c-8cad-f1ca52038a07/'
-excerpt: >-
-  This is placeholder text that our web designers put here to make sure words
-  appear properly on your website. This text is going to be replaced once the
-  website is completed. You are currently reading text that is written in
-  English, not any other language.
+excerpt: 'Phasellus ac dui pellentesque, lacinia risus ut, imperdiet eros.'
 meta:
   description: test meta description
   title: test meta title
