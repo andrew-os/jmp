@@ -4,11 +4,7 @@ title: Project 2
 status: Featured / Published
 date: '2018-03-27'
 featuredImage: 'https://ucarecdn.com/ca89c3b3-3833-4426-bbf7-b35b9a0e4999/'
-excerpt: >-
-  Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
-  interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque lectus
-  est, lobortis ac efficitur vitae, posuere a mauris. Phasellus ac dui
-  pellentesque, lacinia risus ut, imperdiet eros.
+excerpt: 'Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. '
 categories:
   - category: News
 meta:
