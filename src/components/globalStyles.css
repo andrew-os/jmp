@@ -1,9 +1,10 @@
 :root {
   --primary: #00c2bd;
   --secondary: #000;
+  --white: #FCF9FA;
   --lightGrey: whitesmoke;
   --midGrey: #cacaca;
-  --darkGrey: #272727;
+  --darkGrey: #091008;
   --danger: #ff3d3d;
   --font-primary: 'Open Sans', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
@@ -155,7 +156,7 @@ blockquote {
 .section {
   width: 100%;
   padding: 5rem 0;
-  border-bottom: 1px solid #f1f1f1;
+  /* border-bottom: 1px solid #f1f1f1; */
 }
 .section:last-child {
   border: 0;
@@ -229,21 +230,36 @@ blockquote {
   justify-content: center;
 }
 
+/* */
+.no-list{
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
 /* Grids and widths */
 .container{
   margin: 0 auto;
-  max-width: 1372px;
-  width: 100%;
+  /* max-width: 1372px; */
+  width: calc(100% - 20px);
   /* width: calc(100% - 130px); */
 }
 /* tablet */
+@media screen and (min-width: 768px){
+  .container{
+    max-width: 720px;
+    width: 100%;
+  }
+}
+
 @media screen and (min-width: 1000px){
   .container{
     max-width: 960px;
+    width: calc(100% - 20px);
   }
 }
 /* Sml laptop */
-@media screen and (min-width: 1220px){
+@media screen and (min-width: 1200px){
   .container{
     max-width: 1140px;
     width: 100%;

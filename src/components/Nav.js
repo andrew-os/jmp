@@ -14,16 +14,24 @@ export class Navigation extends Component {
   state = {
     active: false,
     activeSubNav: false,
-    currentPath: false
+    currentPath: false,
+    scrolling: false
   }
 
-  componentDidMount = () =>
+  componentDidMount (){
     this.setState({ currentPath: this.props.location.pathname })
-
+    window.addEventListener('scroll', this.handleScroll)
+  }
+  componentWillUnmount ()  {
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+  handleScroll = () => this.setState({ scrolling: true})
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 
   // Only close nav if it is open
   handleLinkClick = () => this.state.active && this.handleMenuToggle()
+
+
 
   toggleSubNav = subNav =>
     this.setState({
@@ -31,7 +39,7 @@ export class Navigation extends Component {
     })
 
   render() {
-    const { active } = this.state,
+    const { active, scrolling } = this.state,
       { subNav, email, phone } = this.props,
       NavLink = ({ to, className, children, ...props }) => (
         <Link
@@ -48,7 +56,7 @@ export class Navigation extends Component {
       
       
     return (
-      <div className="nav-layout">
+      <div className={`nav-layout ${scrolling ? '-scroll': ''}`} onScroll={this.handleScroll}>
         <div className={`Nav ${active ? 'Nav-active' : ''} nav-cont`}>
           <div className="bg-w"></div>
           <div className="inner-cont">
@@ -118,7 +126,7 @@ export class Navigation extends Component {
               </div>
             </div>
             <div className="nav-footer">
-                <div class="nav-footer-social">
+                <div className="nav-footer-social">
                   <FontAwesomeIcon icon={faInstagram} />
                   <FontAwesomeIcon icon={faEnvelope} />
                 </div>
@@ -151,5 +159,12 @@ export class Navigation extends Component {
 }
 
 export default ({ subNav, email, phone }) => (
-  <Location>{route => <Navigation email={email} phone={phone} subNav={subNav} {...route} />}</Location>
+  <Location>{route => 
+    <Navigation 
+      email={email} 
+      phone={phone} 
+      subNav={subNav}
+      {...route} />
+  }
+  </Location>
 )

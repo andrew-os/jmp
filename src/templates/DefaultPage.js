@@ -6,22 +6,22 @@ import Content from '../components/Content'
 import Layout from '../components/Layout'
 import SVGIcon from '../components/SVGIcon'
 
+import './DefaultPage.css'
+
 // Export Template for use in CMS preview
 export const DefaultPageTemplate = ({
   title,
-  subtitle,
   featuredImage,
   body
 }) => (
   <main className="DefaultPage">
     <PageHeader
-      title={title}
-      subtitle={subtitle}
       backgroundImage={featuredImage}
     />
 
     <section className="section">
       <div className="container">
+        <h1>{title}</h1>
         <Content source={body} />
         <SVGIcon src="/images/calendar.svg" />
       </div>

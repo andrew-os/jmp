@@ -23,9 +23,10 @@
   width: 223px;
   height: 156px;
 }
-@media only screen and (max-width: 681px){
+@media only screen and (max-width: 767px){
   .Logo{
-    width: 341px;
-    height:54px;
+    width: 100%;
+    height:100%;
+    background-size: cover;
   }
 }

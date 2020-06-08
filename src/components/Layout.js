@@ -4,6 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
+import MobStickyFooter from './MobStickyFooter'
 
 
 import 'modern-normalize/modern-normalize.css'
@@ -84,6 +85,7 @@ export default ({ children, meta, title }) => {
               
 
             <Footer />
+            <MobStickyFooter />
           </Fragment>
         )
       }}

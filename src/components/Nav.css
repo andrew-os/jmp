@@ -124,10 +124,16 @@
     z-index: 1;
     position: absolute;
     right: 15px;
-    top: 22px;
+    /* top: 22px; */
   }
   .Nav .Logo {
     z-index: 1;
+  }
+
+  @media screen and (min-width: 768px){
+    .Nav--MenuButton{
+      top: 22px;
+    }
   }
 
   .Nav--Links {
@@ -259,19 +265,35 @@
 }
 /* Nav button shape */
 .nav-btn-cont{
-  color: #fff;
-  height: 228px;
+  color: #000;
   overflow: hidden;
   position: fixed;
   right: 0;
   top: 0;
-  width: 228px;
+  width: 60px;
+  height: 80px;
   z-index: 14;
 }
 .nav-btn-bg{
-  background-color: #000;
+
   height: 100%; width: 100%;
-  transform: rotate(45deg) translateY(-71%);
+ 
+}
+
+@media screen and (min-width: 768px){
+  .nav-btn-cont{
+    color: #fff;
+    right: 0;
+    top: 0;
+    width: 228px;
+    height: 228px;
+  }
+
+  .nav-btn-bg{
+    background-color: #000;
+    height: 100%; width: 100%;
+    transform: rotate(45deg) translateY(-71%);
+  }
 }
 
 /*Hamburger css */
@@ -312,7 +334,7 @@
   transition-timing-function: ease;
   transition-duration: .15s;
   transition-property: transform;
-  background-color: #fff;
+  background-color: #000;
 }
 .hamburger-inner:after, .hamburger-inner:before {
   display: block;
@@ -345,14 +367,31 @@
 }
 
 
+@media screen and (min-width: 768px){
+  .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background: #fff;
+  }
+}
+
 .logo-w {
-  height: 140px;
+  background: 0;
+  height: 160px;
   left: 0;
   position: fixed;
   top: 0px;
   width: 100%;
   z-index:11;
 } 
+
+.-scroll .logo-w{
+  background: #FCF9FA;
+  opacity: 0.9;
+}
+@media screen and (min-width: 768px){
+  .logo-w{
+    height: 140px;
+  }
+}
 
 .Nav-active .logo-w{
   height: 183px;
@@ -446,7 +485,7 @@
 
 
 /* MOBILE ONLY */
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
 .NavLink:hover,
 .NavLink.active,
 .NavLink:focus {

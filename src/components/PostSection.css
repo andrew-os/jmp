@@ -23,23 +23,9 @@
   color: white;
 }
 
-.PostSection--Grid > * {
-  width: calc(33.33% - 2rem);
-  /* margin-bottom: 4rem; */
-}
 
-@supports (display: grid) {
-  .PostSection--Grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0.5rem;
-  }
 
-  .PostSection--Grid > * {
-    width: auto;
-    /* margin: 0; */
-  }
-}
+
 
 .PostSection--Title {
   width: 100%;
@@ -48,7 +34,7 @@
   line-height: 1.2;
 }
 
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 767px) {
   .PostSection--Grid > * {
     width: 100%;
     max-width: 50rem;
@@ -62,5 +48,39 @@
       grid-template-columns: 1;
       grid-gap: 0;
     }
+  }
+}
+@media screen and (min-width: 768px){
+  @supports (display: grid) {
+    .PostSection--Grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 12px;
+    }
+  }
+}
+@media screen and (min-width: 1000px){
+  @supports (display: grid) {
+    .PostSection--Grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 6px;
+    }
+  }
+
+}
+@media screen and (min-width: 1200px){
+  @supports (display: grid) {
+    .PostSection--Grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 0.5rem;
+    }
+  
+
+  }
+  .PostSection--Grid > * {
+    /* width: calc(33.33% - 2rem); */
+    /* margin-bottom: 4rem; */
   }
 }

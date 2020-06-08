@@ -1,0 +1,26 @@
+@media screen and (max-width: 769px){
+    .footer.mob--footer {
+        padding: 6px 0;
+        background: var(--darkGrey);
+        font-size: 1.2rem;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .mob--footer li {
+        color: var(--white);
+        font-size: 40px;
+        padding: 0 20px;
+      }
+      .social-list--footer{
+        display: flex;
+        justify-content: center;
+      }
+}
+
+
+
+
