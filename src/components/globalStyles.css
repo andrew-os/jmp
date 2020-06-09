@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Sharp Sans No1 Book";
+  src: url("../../static/fonts/SharpSansNo1-Book.woff")
+  format("woff");
+}
+@font-face {
+  font-family: "Sharp Sans No1 Bold";
+  src: url("../../static/fonts/SharpSansNo1-Bold.woff")
+  format("woff");
+}
+
 :root {
   --primary: #00c2bd;
   --secondary: #000;
@@ -6,7 +17,7 @@
   --midGrey: #cacaca;
   --darkGrey: #091008;
   --danger: #ff3d3d;
-  --font-primary: 'Open Sans', sans-serif;
+  --font-primary: 'Sharp Sans No1 Book';
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
@@ -35,7 +46,7 @@ html {
 }
 
 body {
-  font-family: var(--font-system);
+  font-family: var(--font-primary);
   min-height: 100%;
   position: relative;
   background: white;
@@ -69,6 +80,17 @@ h6 {
   margin: 0;
   margin-bottom: 0.5em;
 }
+
+h1.xl{
+  font-size: 7.2rem;
+}
+h1{
+  font-size: 3.2rem;
+}
+h2{
+  font-size: 2.4rem;
+}
+h3{}
 
 pre {
   background: var(--lightGrey);
