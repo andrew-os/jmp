@@ -1,4 +1,4 @@
-@media screen and (max-width: 769px){
+@media screen and (max-width: 768px){
     .footer.mob--footer {
         padding: 6px 0;
         background: var(--darkGrey);
@@ -19,6 +19,12 @@
         display: flex;
         justify-content: center;
       }
+}
+
+@media screen and (min-width: 769px){
+  .footer.mob--footer {
+    display: none;
+  }
 }
 
 

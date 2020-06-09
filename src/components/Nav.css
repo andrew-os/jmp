@@ -399,9 +399,15 @@
   left: 34px;
   background: 0;
 }
+
+
 .contact{
   align-self:center;
 }
+/* .contact-w{
+  font-size: 3.3rem;
+} */
+
 .nav-camera-cta{
   z-index: 15;
   bottom: 0;
