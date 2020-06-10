@@ -13,6 +13,7 @@ import './DefaultPage.css'
 const ClipBG = styled.div`
 background: ${props => `url(${props.background}) no-repeat top center`};
 background-size: cover;
+position: relative;
 `
 export const DefaultPageTemplate = ({
   title,
@@ -22,7 +23,7 @@ export const DefaultPageTemplate = ({
   <main className="DefaultPage">
     <section className="section">
       <div className="clip-content">
-        <ClipBG className="clip-cut" background={featuredImage}>
+        <ClipBG background={featuredImage}>
           <div className="bg-w"></div>
           <div className="inner-cont">
             <div className="inner-cont-w">
