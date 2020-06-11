@@ -19,3 +19,13 @@
     top: 0;
     left: 0;
 } */
+.clip-content{
+    position: relative;
+    top: 75px;
+    margin: 0 54px;
+}
+.clip-inner-cont{
+    position: absolute;
+    top: 45%;
+    transform: translateY(-45%);
+}

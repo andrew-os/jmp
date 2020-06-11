@@ -10,41 +10,47 @@ import SVGIcon from '../components/SVGIcon'
 import './DefaultPage.css'
 
 // Export Template for use in CMS preview
+//    <SVGIcon src="/images/calendar.svg" />
 const ClipBG = styled.div`
 background: ${props => `url(${props.background}) no-repeat top center`};
 background-size: cover;
 position: relative;
+clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+z-index: -1;
+height: 100vh;
 `
 export const DefaultPageTemplate = ({
   title,
   featuredImage,
   body
 }) => (
-  <main className="DefaultPage">
-    <section className="section">
-      <div className="clip-content">
-        <ClipBG background={featuredImage}>
-          <div className="bg-w"></div>
-          <div className="inner-cont">
-            <div className="inner-cont-w">
-              <div className="container">
-                <div className="row row-align-btween">
-                  <div className="lg:gr-5 gr-12">
-                    <header>
-                      <h1>{title}</h1>
-                    </header>
-                    <Content source={body} />
-                    <SVGIcon src="/images/calendar.svg" />
-                  </div>
-                  <div className="lg:gr-4 gr-12"></div>
-                </div>  
+  <div>
+    <div className="clip-content">
+      <ClipBG background={featuredImage}>
+      <div className="bg-w"></div>
+
+      </ClipBG>
+
+      <div className="clip-inner-cont">
+        <div className="clip-inner-cont-w">
+          <div className="container">
+            <div className="row row-align-btween">
+              <div className="lg:gr-6 gr-12">
+                <header>
+                  <h1>{title}</h1>
+                </header>
+                <Content source={body} />
+            
               </div>
-            </div>
+              <div className="lg:gr-4 gr-12"></div>
+            </div>  
           </div>
-          </ClipBG>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  
+  </div>
+
 )
 
 const DefaultPage = ({ data: { page } }) => (
