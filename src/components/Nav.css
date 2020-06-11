@@ -488,7 +488,7 @@
 .nav-footer{
   display: none;
   left: 0px;
-  bottom: 0;
+  bottom: -15px;
   box-sizing: border-box;
   padding: 35px 0px;
   position: absolute;

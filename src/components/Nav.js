@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon, far } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Logo from './Logo'
 import NavLogo from './NavLogo'
@@ -130,8 +130,8 @@ export class Navigation extends Component {
                 <div class="row">
                     <div className="gr-12">
                       <div className="nav-footer-social">
-                        <FontAwesomeIcon icon={faInstagram} />
-                        <FontAwesomeIcon icon={faEnvelope} />
+                        <FontAwesomeIcon icon={ faInstagram } />
+                        <FontAwesomeIcon icon={ faEnvelope } />
                       </div>                    
                     </div>
                 
