@@ -2,8 +2,8 @@
   display: flex;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 140px;
+  background-position: left center;
+  height: 75px;
   width: 843px;
   align-items: center;
   justify-content: center;
