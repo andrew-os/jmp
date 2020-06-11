@@ -258,7 +258,10 @@ blockquote {
   list-style: none;
   margin: 0;
 }
-
+/* Paddings and MArgins */
+.p-0{
+  padding: 0 !important;
+}
 /* Grids and widths */
 .container{
   margin: 0 auto;
@@ -323,7 +326,7 @@ blockquote {
   flex: 0 0 auto;
   flex-direction: column;
   box-sizing: border-box;
-  padding-left: 20x;
+  padding-left: 20px;
   padding-right: 20px;
 }
 .gr-1{
@@ -431,6 +434,10 @@ blockquote {
     flex-basis: 100%;
     max-width: 100%;
   }
+
+  .lg\:text-left{
+    text-align: left;
+  }
   @media only screen and (min-width: 769px){
     .row{
       margin-left: -34px;
@@ -442,9 +449,12 @@ blockquote {
     }
   }
 
-@media only screen and (max-width: 680px){
+@media only screen and (max-width: 767px){
   .gr-12 {
     flex-basis: 100%;
     max-width: 100%;
+  }
+  .text-center{
+    text-align: center;
   }
 }

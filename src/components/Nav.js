@@ -68,7 +68,7 @@ export class Navigation extends Component {
             <div className="inner-cont-w">
               <div className="container">
                 <div className="row row-align-btween">
-                  <nav className="lg:gr-5 gr-12">
+                  <nav className="lg:gr-5 gr-12 text-center lg:text-left">
                     
                         <NavLink to="/">Home</NavLink>
                         <NavLink to="/components/">Components</NavLink>
@@ -126,10 +126,19 @@ export class Navigation extends Component {
               </div>
             </div>
             <div className="nav-footer">
-                <div className="nav-footer-social">
-                  <FontAwesomeIcon icon={faInstagram} />
-                  <FontAwesomeIcon icon={faEnvelope} />
+              <div className="container p-0">
+                <div class="row">
+                    <div className="gr-12">
+                      <div className="nav-footer-social">
+                        <FontAwesomeIcon icon={faInstagram} />
+                        <FontAwesomeIcon icon={faEnvelope} />
+                      </div>                    
+                    </div>
+                
                 </div>
+                  
+              </div>                                
+                
                
             </div>
           </div>
