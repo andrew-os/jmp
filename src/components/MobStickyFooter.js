@@ -1,11 +1,10 @@
 import React from 'react'
 // import InstagramFeed from './InstagramFeed'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import './MobStickyFooter.css'
-import { Instagram } from 'react-feather'
 
 //<InstagramFeed count="8" />
 export default () => (

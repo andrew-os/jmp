@@ -385,6 +385,7 @@
   height: 160px;
   left: 0;
   position: fixed;
+  display: block;
   top: 0px;
   width: 100%;
   z-index:11;
