@@ -2,12 +2,16 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { PhotoSwipe } from 'react-photoswipe'
+import Slider from "react-slick";
 import Image from './Image'
+
 
 import _kebabCase from 'lodash/kebabCase'
 
 import './Gallery.css'
 import 'react-photoswipe/lib/photoswipe.css'
+
+
 
 export const query = graphql`
   fragment GallerySlider on MarkdownRemark {
@@ -19,6 +23,9 @@ export const query = graphql`
     }
   }
 `
+/*
+
+*/
 
 export default class GallerySlider extends Component {
   state = {
@@ -71,28 +78,34 @@ export default class GallerySlider extends Component {
 
   render() {
     const { images } = this.props
+    const settings = {
+      dots: false,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    }
     return (
       <Fragment>
         {images &&
           images.length > 0 && (
             <div className="Slider">
-              {images.map((image, index) => (
-                <figure
-                  className="Slider--Item"
-                  key={_kebabCase(image.alt) + '-' + index}
-                  onClick={() => this.isOpen(true, index)}
-                >
-                  <div>
+              <Slider {...settings}>
+                {images.map((image, index) => (
+
+                    <div                         
+                    key={_kebabCase(image.alt) + '-' + index}
+                    onClick={() => this.isOpen(true, index)}>
                     <Image
-                      resolutions="large"
-                      src={image.image}
-                      alt={image.alt}
-                      size="cover"
+                    resolutions="large"
+                    src={image.image}
+                    alt={image.alt}
+                    
+                    
                     />
-                  </div>
-                  {image.title && <figcaption>{image.title}</figcaption>}
-                </figure>
-              ))}
+                    </div>
+                    
+                ))}
+              </Slider>
             </div>
           )}
         {this.state.loaded &&

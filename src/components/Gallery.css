@@ -53,3 +53,36 @@
     top: 50%;
   }
 }
+
+/* Slick Overrides */
+.slick-list .BackgroundImage{
+  position: relative;
+}
+.slick-next, .slick-prev{
+  bottom: 0;
+}
+.slick-next{
+  right: 0;
+}
+.Slider .slick-next:before, .slick-prev:before{
+  content: '' !important;
+  color: #000;
+  font-size: 30px;
+  opacity: 1;
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+  display: block;
+  
+}
+
+.Slider .slick-next:before{
+  border-right: 5px solid black;
+  border-bottom: 5px solid black;
+}
+.Slider .slick-prev:before{
+  border-left: 5px solid black;
+  border-top: 5px solid black;
+  
+}
+

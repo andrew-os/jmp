@@ -1,4 +1,5 @@
 const postcssPresetEnv = require('postcss-preset-env')
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -61,7 +62,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/images`,
+        path: path.join(__dirname,  `static`, `images`),
         name: 'images'
       }
     },
@@ -72,6 +73,7 @@ module.exports = {
         name: 'pages'
       }
     },
+
 
     // images
     'gatsby-plugin-sharp',

@@ -127,7 +127,7 @@ export class Navigation extends Component {
             </div>
             <div className="nav-footer">
               <div className="container p-0">
-                <div class="row">
+                <div className="row">
                     <div className="gr-12">
                       <div className="nav-footer-social">
                         <FontAwesomeIcon icon={ faInstagram } />
