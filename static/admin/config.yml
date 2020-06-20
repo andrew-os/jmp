@@ -379,14 +379,7 @@ collections: # A list of collections the CMS should be able to edit
           name: featuredImage,
           widget: image,
           required: false,
-        }
-      - label: 'Slider'
-        name: 'projectgallery'
-        widget: 'list'
-        fields:
-          - { name: image, label: Image, widget: image }
-          - { name: alt, label: Alt, widget: string }
-          - { name: title, label: Title, widget: string, required: false }        
+        }      
       - label: 'Meta'
         required: false
         name: 'meta'
