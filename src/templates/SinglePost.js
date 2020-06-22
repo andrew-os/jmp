@@ -23,50 +23,65 @@ export const SinglePostTemplate = ({
       itemScope
       itemType="http://schema.org/BlogPosting"
     >
-      <div className="container skinny">
+      <div className="container">
         <Link className="SinglePost--BackButton" to="/blog/">
           <ChevronLeft /> BACK
         </Link>
         <div className="SinglePost--Content relative">
-          <div className="SinglePost--Meta">
-            {date && (
-              <time
-                className="SinglePost--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {date}
-              </time>
-            )}
-            {categories && (
-              <Fragment>
-                <span>|</span>
-                {categories.map((cat, index) => (
-                  <span
-                    key={cat.category}
-                    className="SinglePost--Meta--Category"
+
+          <div className="row">
+
+            <div className="lg:gr-6 gr-12 lg:order-2 order-1">
+              <div className="ProjectSlider--w">
+                <ProjectSlider images={projectgallery}/>
+              </div>            
+            </div>
+
+            <div className="lg:gr-6 gr-12 lg:order-1 order-2">
+              {title && (
+                <h1 className="SinglePost--Title" itemProp="title">
+                  {title}
+                </h1>
+              )}
+
+              <div className="SinglePost--Meta">
+                {date && (
+                  <time
+                    className="SinglePost--Meta--Date"
+                    itemProp="dateCreated pubdate datePublished"
+                    date={date}
                   >
-                    {cat.category}
-                    {/* Add a comma on all but last category */}
-                    {index !== categories.length - 1 ? ',' : ''}
-                  </span>
-                ))}
-              </Fragment>
-            )}
+                    {date}
+                  </time>
+                )}
+                {categories && (
+                  <Fragment>
+                    <span>|</span>
+                    {categories.map((cat, index) => (
+                      <span
+                        key={cat.category}
+                        className="SinglePost--Meta--Category"
+                      >
+                        {cat.category}
+                        {/* Add a comma on all but last category */}
+                        {index !== categories.length - 1 ? ',' : ''}
+                      </span>
+                    ))}
+                  </Fragment>
+                )}
+              </div>
+          
+
+              <div className="SinglePost--InnerContent">
+                <Content source={body} />
+              </div>
+            </div>
+
+
           </div>
 
-          {title && (
-            <h1 className="SinglePost--Title" itemProp="title">
-              {title}
-            </h1>
-          )}
 
-          <div className="ProjectSlider--w">
-            <ProjectSlider images={projectgallery}/>
-          </div>
-          <div className="SinglePost--InnerContent">
-            <Content source={body} />
-          </div>
+
 
           <div className="SinglePost--Pagination">
             {prevPostURL && (

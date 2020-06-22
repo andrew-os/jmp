@@ -437,6 +437,13 @@ blockquote {
   .lg\:text-left{
     text-align: left;
   }
+
+  .lg\:order-1{
+    order: 1;
+  }
+  .lg\:order-2{
+    order: 2;
+  }
   @media only screen and (min-width: 769px){
     .row{
       margin-left: -34px;
@@ -455,5 +462,11 @@ blockquote {
   }
   .text-center{
     text-align: center;
+  }
+  .order-1{
+    order: 1;
+  }
+  .order-2{
+    order: 2;
   }
 }

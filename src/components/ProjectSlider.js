@@ -104,6 +104,7 @@ export default class ProjectSlider extends Component {
                       resolutions="large"
                       src={image.image}
                       alt={image.alt}
+                      sizes={'800'}
                       
                       
                       />
@@ -127,9 +128,10 @@ export default class ProjectSlider extends Component {
                     onClick={() => this.isOpen(true, i)}
                     >
                       <Image
-                      resolutions="large"
+                      resolutions="small"
                       src={img.image}
                       alt={img.alt}
+                      sizes={'320'}
                       
                       />
 
