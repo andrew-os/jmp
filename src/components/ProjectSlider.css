@@ -1,0 +1,19 @@
+.ProjectSlider--w .BackgroundImage img{
+    width: 100%;
+}
+.ProjectSlider--w .Slider{
+    max-height: 500px;
+}
+
+.ProjectSlider--w .slider--thumbs{
+    position: relative;
+}
+
+@media screen and (min-width: 1000px){
+    .ProjectSlider--w .slider--thumbs{
+        position: absolute;
+        left: 0;
+        width: 50%;
+        bottom: -33px;
+    }
+}

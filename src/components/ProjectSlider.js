@@ -9,6 +9,7 @@ import Image from './Image'
 import _kebabCase from 'lodash/kebabCase'
 
 import './Gallery.css'
+import './ProjectSlider.css'
 import 'react-photoswipe/lib/photoswipe.css'
 
 
@@ -94,6 +95,8 @@ export default class ProjectSlider extends Component {
                 <Slider 
                   asNavFor={this.state.nav2}
                   ref={slider => (this.slider1 = slider)}
+                  slidesToShow={1}
+                  arrows={false}
                 >
                   {images.map((image, index) => (
 
