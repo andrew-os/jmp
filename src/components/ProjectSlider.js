@@ -32,7 +32,9 @@ export default class ProjectSlider extends Component {
     loaded: false,
     isOpen: false,
     sliderImages: [],
-    index: 0
+    index: 0,
+    nav1: this.slider1,
+    nav2: this.slider2
   }
 
   isOpen(isOpen, index) {
@@ -74,38 +76,68 @@ export default class ProjectSlider extends Component {
         loopCount++
       }
     }
+      this.setState({
+        nav1: this.slider1,
+        nav2: this.slider2
+      })
   }
 
   render() {
     const { images } = this.props
-    const settings = {
-      dots: false,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    }
+
     return (
       <Fragment>
         {images &&
           images.length > 0 && (
-            <div className="Slider">
-              <Slider {...settings}>
-                {images.map((image, index) => (
+            <div>
+              <div className="Slider">
+                <Slider 
+                  asNavFor={this.state.nav2}
+                  ref={slider => (this.slider1 = slider)}
+                >
+                  {images.map((image, index) => (
+
+                      <div                         
+                      key={_kebabCase(image.alt) + '-' + index}
+                      onClick={() => this.isOpen(true, index)}>
+                      <Image
+                      resolutions="large"
+                      src={image.image}
+                      alt={image.alt}
+                      
+                      
+                      />
+                      </div>
+                      
+                  ))}
+                </Slider>
+              </div>
+              <div className="Slider slider--thumbs">
+                <Slider 
+                asNavFor={this.state.nav1}
+                ref={slider => (this.slider2 = slider)}
+                slidesToShow={4}
+                swipeToSlide={true}
+                focusOnSelect={true}
+                >
+                  {images.map((img, i) => (
 
                     <div                         
-                    key={_kebabCase(image.alt) + '-' + index}
-                    onClick={() => this.isOpen(true, index)}>
-                    <Image
-                    resolutions="large"
-                    src={image.image}
-                    alt={image.alt}
-                    
-                    
-                    />
+                    key={_kebabCase(img.alt) + '-' + i}
+                    onClick={() => this.isOpen(true, i)}
+                    >
+                      <Image
+                      resolutions="large"
+                      src={img.image}
+                      alt={img.alt}
+                      
+                      />
+
                     </div>
-                    
-                ))}
-              </Slider>
+                  ))}                
+                </Slider>
+              
+              </div>
             </div>
           )}
         {this.state.loaded &&

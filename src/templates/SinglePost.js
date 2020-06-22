@@ -5,12 +5,14 @@ import { ChevronLeft } from 'react-feather'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
+import ProjectSlider from '../components/ProjectSlider'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
   title,
   date,
   body,
+  projectgallery,
   nextPostURL,
   prevPostURL,
   categories = []
@@ -59,6 +61,9 @@ export const SinglePostTemplate = ({
             </h1>
           )}
 
+          <div className="ProjectSlider--w">
+            <ProjectSlider images={projectgallery}/>
+          </div>
           <div className="SinglePost--InnerContent">
             <Content source={body} />
           </div>
@@ -116,6 +121,7 @@ export const pageQuery = graphql`
   query SinglePost($id: String!) {
     post: markdownRemark(id: { eq: $id }) {
       ...Meta
+      ...ProjectSlider
       html
       id
       frontmatter {
