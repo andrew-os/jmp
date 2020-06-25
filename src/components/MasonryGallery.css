@@ -1,0 +1,36 @@
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -8px; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 8px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 8px;
+  }
+/* TEMP FIX Really need to sort this image stuff out */  
+.Masonry .BackgroundImage{
+    position: relative;
+}
+.Masonry .BackgroundImage > img{
+    width: 100%;
+}
+/* Optional, different gutter size on mobile */
+@media (max-width: 800px) {
+    .my-masonry-grid {
+      margin-left: -20px; /* gutter size offset */
+    }
+    .my-masonry-grid_column {
+      padding-left: 20px; /* gutter size offset */
+    }
+    .my-masonry-grid_column > div {
+      margin-bottom: 6px; /* space between items */
+    }
+}
