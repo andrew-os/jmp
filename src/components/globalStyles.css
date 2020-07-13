@@ -81,8 +81,11 @@ h6 {
 }
 
 h1.xl{
-  font-size: 7.2rem;
+  font-size: 5rem;
+  text-transform: uppercase;
 }
+
+
 h1{
   font-size: 3.2rem;
 }
@@ -261,6 +264,17 @@ blockquote {
 .p-0{
   padding: 0 !important;
 }
+.mb-0{
+  margin-bottom: 0;
+}
+
+.mt-1{
+  margin-top: 13px;
+}
+.mt-5{
+  margin-top: 50px;
+}
+
 /* Grids and widths */
 .container{
   margin: 0 auto;
@@ -292,7 +306,7 @@ blockquote {
   
 }
 /* Lrg Laptop */
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1439px){
   .container{
     width: 100%;
     max-width: 1372px;
@@ -300,7 +314,9 @@ blockquote {
 }
 /* Pc Monitor */
 @media screen and (min-width: 1600px){
-
+  h1.xl{
+    font-size: 7.2rem;
+  }
 }
 /* 4K */
 @media screen and (min-width: 2100px){
@@ -381,10 +397,72 @@ blockquote {
 }
 
 /* Medium Screens */
-
+@media only screen and (min-width: 960px){
+  /* Grid */
+  .md\:gr-1{
+    flex-basis: 8.33333%;
+    max-width: 8.33333%;
+  }
+  .md\:gr-2{
+    flex-basis: 16.66667%;
+    max-width: 16.66667%;
+  }
+  .md\:gr-3{
+    flex-basis: 25%;
+    max-width: 25%;
+  }
+  .md\:gr-4{
+    flex-basis: 33.33333%;
+    max-width: 33.33333%;
+  }
+  .md\:gr-5{
+    flex-basis: 41.66667%;
+    max-width: 41.66667%;
+  }
+  .md\:gr-6{
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .md\:gr-7{
+    flex-basis: 58.33333%;
+    max-width: 58.33333%;
+  }
+  .md\:gr-8{
+    flex-basis: 66.66667%;
+    max-width: 66.66667%;
+  }
+  .md\:gr-9{
+    flex-basis: 75%;
+    max-width: 75%;
+  }
+  .md\:gr-10{
+    flex-basis: 83.33333%;
+    max-width: 83.33333%;
+  }
+  .md\:gr-11{
+    flex-basis: 91.66667%;
+    max-width: 91.66667%;
+  }
+  .md\:gr-12{
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
 
 /*Large Screens */
+@media only screen and (min-width: 1200px){
 
+  /*Margins + Paddings  */
+  .lg\:mb-0{
+    margin-bottom: 0;
+  }
+
+  .lg\:mt-5{
+    margin-top: 50px;
+  }
+
+
+  /* Grid */
   .lg\:gr-1{
     flex-basis: 8.33333%;
     max-width: 8.33333%;
@@ -444,6 +522,7 @@ blockquote {
   .lg\:order-2{
     order: 2;
   }
+}
   @media only screen and (min-width: 769px){
     .row{
       margin-left: -34px;

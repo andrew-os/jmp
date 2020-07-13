@@ -20,12 +20,21 @@
     left: 0;
 } */
 .clip-content{
-    position: relative;
+    /* position: relative;
     top: 75px;
-    margin: 0 54px;
+    margin: 0 34px; */
 }
 .clip-inner-cont{
-    position: absolute;
-    top: 45%;
-    transform: translateY(-45%);
+    position: relative;
+
+
+}
+
+@media screen and (min-width: 960px ) {
+    .clip-inner-cont{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    
+    }
 }

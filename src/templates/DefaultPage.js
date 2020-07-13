@@ -15,34 +15,40 @@ const ClipBG = styled.div`
 background: ${props => `url(${props.background}) no-repeat top center`};
 background-size: cover;
 position: relative;
-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
 z-index: -1;
-height: 100vh;
+padding-top: 62.5%;
+  @media (min-width: 960px) {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    height: 100vh;
+  }
 `
 export const DefaultPageTemplate = ({
   title,
   featuredImage,
   body
 }) => (
-  <div>
-    <div className="clip-content">
-      <ClipBG background={featuredImage}>
-      <div className="bg-w"></div>
+  <div className="mt-5">
 
-      </ClipBG>
+    <ClipBG background={featuredImage}>
+      <div className="bg-w"></div>
+    </ClipBG>
+
+
+    <div className="clip-content">
+
 
       <div className="clip-inner-cont">
         <div className="clip-inner-cont-w">
           <div className="container">
             <div className="row row-align-btween">
-              <div className="lg:gr-6 gr-12">
-                <header>
+              <div className="md:gr-6 gr-12">
+                <header className="mt-1">
                   <h1>{title}</h1>
                 </header>
                 <Content source={body} />
             
               </div>
-              <div className="lg:gr-4 gr-12"></div>
+              <div className="md:gr-4 gr-12"></div>
             </div>  
           </div>
         </div>

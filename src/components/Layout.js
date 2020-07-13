@@ -90,7 +90,7 @@ export default ({ children, meta, title }) => {
 
             <Nav hello="hello" phone={phone} email={email} subNav={subNav} />
           
-            <div className="container">
+            <div className="container relative">
               <Fragment>{children}</Fragment>
             </div>
               
