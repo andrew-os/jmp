@@ -19,6 +19,17 @@ module.exports = {
       }
     },
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Cormorant Garamond`,
+            variants: [`300`]
+          },
+        ]
+      }
+    },
+    {
       resolve: 'gatsby-plugin-offline',
       options: {
         runtimeCaching: [

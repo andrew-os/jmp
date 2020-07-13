@@ -4,17 +4,20 @@
 .testimonial::before{
     content: '“';
     position: absolute;
-    left: -34px;
-    top: 0;
-    font-size: 90px;
+    left: 8px;
+    top: -15px;
+    font-size: 64px;
+    font-family: 'Cormorant Garamond', serif;
 
 }
 .testimonial::after{
     position: absolute;
     content: '“';
-    bottom: -90px;
-    right: -34px;
-    font-size: 90px;
+    bottom: -16px;
+    right: 8px;
+    font-size: 64px;
+    font-family: 'Cormorant Garamond', serif;
+    transform: rotate(180deg);
 }
 
 .testimonial--quoter{
@@ -26,6 +29,15 @@
 @media screen and (min-width: 768px){
     .testimonial{
         padding: 0 75px;
+    }
+    .testimonial::before{
+        left: -34px;
+        font-size: 90px;
+    }
+    .testimonial::after{
+        bottom: -56px;
+        right: -34px;
+        font-size: 90px;  
     }
     .testimonial--quoter{
         text-align: right;
