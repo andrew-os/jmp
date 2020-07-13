@@ -2,9 +2,14 @@
 template: SinglePost
 title: Project 3
 status: Published
-date: '2018-03-28'
-featuredImage: 'https://ucarecdn.com/689db1a4-3291-478d-86c8-8688d9daaf97/'
+date: 2018-03-28
+featuredImage: https://ucarecdn.com/689db1a4-3291-478d-86c8-8688d9daaf97/
 excerpt: This is an excerpt of Post Two
+clients:
+  - logo: https://ucarecdn.com/2c57a81d-a824-4afb-b37b-702de16e4729/
+  - logo: https://ucarecdn.com/8568e164-b337-4d23-bad8-a7629e34f651/
+  - logo: https://ucarecdn.com/63596b4d-2f62-483e-9782-2536dd2023a6/
+  - logo: https://ucarecdn.com/e8a74ebf-e549-4314-b360-1acced85e149/
 categories:
   - category: Updates
 meta:
