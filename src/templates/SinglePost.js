@@ -6,6 +6,7 @@ import { ChevronLeft } from 'react-feather'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import ProjectSlider from '../components/ProjectSlider'
+import Testimonial from '../components/Testimonial'
 import './SinglePost.css'
 
 export const SinglePostTemplate = ({
@@ -15,6 +16,7 @@ export const SinglePostTemplate = ({
   projectgallery,
   nextPostURL,
   prevPostURL,
+  testimonials = [],
   categories = []
 }) => (
   <main>
@@ -83,26 +85,42 @@ export const SinglePostTemplate = ({
 
 
 
-          <div className="SinglePost--Pagination">
-            {prevPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link prev"
-                to={prevPostURL}
-              >
-                Previous Post
-              </Link>
-            )}
-            {nextPostURL && (
-              <Link
-                className="SinglePost--Pagination--Link next"
-                to={nextPostURL}
-              >
-                Next Post
-              </Link>
-            )}
-          </div>
+
+
+
         </div>
       </div>
+
+
+      <div className="container lg:mt-5">
+        <div className="row">
+          <div className="gr-12">
+            <Testimonial quote={testimonials} />
+          </div>
+    
+        </div>
+
+        <div className="SinglePost--Pagination">
+          {prevPostURL && (
+            <Link
+              className="SinglePost--Pagination--Link prev"
+              to={prevPostURL}
+            >
+              Previous Post
+            </Link>
+          )}
+          {nextPostURL && (
+            <Link
+              className="SinglePost--Pagination--Link next"
+              to={nextPostURL}
+            >
+              Next Post
+            </Link>
+          )}
+        </div>      
+      </div>
+
+
     </article>
   </main>
 )
@@ -146,6 +164,10 @@ export const pageQuery = graphql`
         date(formatString: "MMMM Do, YYYY")
         categories {
           category
+        }
+        testimonials{
+          testimonials
+          quoted
         }
       }
     }
