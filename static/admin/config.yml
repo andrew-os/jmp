@@ -338,7 +338,19 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - { name: image, label: Image, widget: image }
           - { name: alt, label: Alt, widget: string }
-          - { name: title, label: Title, widget: string, required: false }  
+          - { name: title, label: Title, widget: string, required: false }
+      - label: 'Testimonials'
+        name: 'testimonials'
+        widget: 'list'
+        fields:
+          - {name: testimonials, label: Testimonials, widget: text}
+          - {name: quoted, label: Quoted, widget: string}
+      - label: 'Clients'
+        name: 'clients'
+        widget: 'list'
+        fields: 
+        - { name: logo, label: Logo, widget: image}
+        - {name: title, label: Title, widget: string, required: false}  
       - label: 'Categories'
         name: 'categories'
         widget: 'list'
