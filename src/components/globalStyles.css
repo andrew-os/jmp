@@ -10,7 +10,7 @@
 }
 
 :root {
-  --primary: #00c2bd;
+  --primary: #02894B;
   --secondary: #000;
   --white: #FCF9FA;
   --lightGrey: whitesmoke;
@@ -78,6 +78,7 @@ h5,
 h6 {
   margin: 0;
   margin-bottom: 0.5em;
+  text-align: center;
 }
 
 h1.xl{
@@ -88,6 +89,7 @@ h1.xl{
 
 h1, .h1{
   font-size: 3.2rem;
+  text-transform: uppercase;
 }
 h2, .h2{
   font-size: 2.4rem;
@@ -219,8 +221,8 @@ blockquote {
 /* Buttons */
 
 .Button {
-  background: var(--primary);
-  color: white;
+  background: white;
+  color: #000;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;
@@ -232,6 +234,8 @@ blockquote {
   transition: all 0.2s ease;
   cursor: pointer;
   border-radius: var(--borderRadius);
+  box-shadow: 3px 4px 6px #ccc;
+  border: 1px solid var(--darkGrey);
 }
 .Button:hover,
 .Button:focus {
@@ -255,6 +259,10 @@ blockquote {
 }
 
 /* */
+.hidden{
+  display: none;
+}
+
 .no-list{
   padding: 0;
   list-style: none;
@@ -270,6 +278,9 @@ blockquote {
 
 .mt-1{
   margin-top: 13px;
+}
+.mt-3{
+  margin-top: 32px;
 }
 .mt-5{
   margin-top: 50px;
@@ -395,9 +406,35 @@ blockquote {
 .w-auto{
   width: auto;
 }
+.w-100{
+  width: 100%;
+}
 
 /* Medium Screens */
 @media only screen and (min-width: 960px){
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6{
+      text-align: left;
+    }
+    /* Utility */
+    .md\:block{
+      display: block;
+    }
+    .md\:hidden{
+      display: none;
+    }
+    /*Margins + Paddings  */
+    .md\:mb-0{
+      margin-bottom: 0;
+    }
+  
+    .md\:mt-5{
+      margin-top: 50px;
+    }
   /* Grid */
   .md\:gr-1{
     flex-basis: 8.33333%;
@@ -451,7 +488,13 @@ blockquote {
 
 /*Large Screens */
 @media only screen and (min-width: 1200px){
-
+  /* Utility */
+  .lg\:block{
+    display: block;
+  }
+  .lg\:hidden{
+    display: none;
+  }
   /*Margins + Paddings  */
   .lg\:mb-0{
     margin-bottom: 0;

@@ -1,14 +1,27 @@
 import React from 'react'
+import styled from '@emotion/styled'
 import { MapPin, Smartphone, Mail } from 'react-feather'
 import { graphql } from 'gatsby'
 
-import PageHeader from '../components/PageHeader'
+
 import FormSimpleAjax from '../components/FormSimpleAjax'
 import Content from '../components/Content'
-import GoogleMap from '../components/GoogleMap'
 import Layout from '../components/Layout'
 import './ContactPage.css'
 
+const ClipBG = styled.div`
+  display: none;
+
+  @media (min-width: 960px) {
+    display: block;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    height: 100vh;
+    background: ${props => `url(${props.background}) no-repeat top center`};
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+  }
+`
 // Export Template for use in CMS preview
 export const ContactPageTemplate = ({
   body,
@@ -20,17 +33,32 @@ export const ContactPageTemplate = ({
   email,
   locations
 }) => (
-  <main className="Contact">
-    <PageHeader
-      title={title}
-      subtitle={subtitle}
-      backgroundImage={featuredImage}
-    />
+  <main className="Contact mt-5">
+
+  <ClipBG background={featuredImage}>
+    <div className="bg-w"></div>
+  </ClipBG>
+
     <section className="section Contact--Section1">
       <div className="container Contact--Section1--Container">
-        <div>
-          <Content source={body} />
-          <div className="Contact--Details">
+        
+      <div className="row">
+        <div className="gr-12">
+          
+          <h1 className="mt-3">{title}</h1>
+          
+          {subtitle.length > 0 &&
+            <p>{subtitle}</p>
+          }
+
+        </div>
+      </div>
+
+        
+        
+        <div className="row row-align-btween">
+          <div className="md:gr-6 gr-12">
+            <div className="Contact--Details">
             {address && (
               <a
                 className="Contact--Details--Item"
@@ -53,10 +81,20 @@ export const ContactPageTemplate = ({
                 <Mail /> {email}
               </a>
             )}
+            </div>
           </div>
+
+          <div className="md:gr-4 gr-12"></div>
+        
+        
         </div>
 
         <div>
+          <Content source={body} />
+
+        </div>
+
+        <div className="block md:hidden">
           <FormSimpleAjax name="Simple Form Ajax" />
         </div>
       </div>

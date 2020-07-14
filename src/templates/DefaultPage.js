@@ -5,7 +5,7 @@ import styled from '@emotion/styled'
 
 import Content from '../components/Content'
 import Layout from '../components/Layout'
-import SVGIcon from '../components/SVGIcon'
+
 
 import './DefaultPage.css'
 

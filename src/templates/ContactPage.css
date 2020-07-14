@@ -2,13 +2,16 @@
 }
 
 .Contact--Details {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
-
+.Contact--Details > a:not(:first-child) {
+  border-top: 1px solid var(--lightGrey);
+}
 .Contact--Details--Item {
   display: flex;
+  text-align: center;
+  flex-direction: column;
   padding: 2rem 0;
-  border-top: 1px solid var(--lightGrey);
   font-weight: 500;
   text-decoration: none;
   color: inherit;
@@ -17,22 +20,38 @@
 
 .Contact--Details--Item:hover,
 .Contact--Details--Item:focus {
-  color: var(--primary);
+  /* color: var(--primary); */
+  opacity: 0.75;
 }
 
 .Contact--Details--Item svg {
-  margin-right: 1.5rem;
-  color: var(--primary);
+  color: var(--darkGrey);
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
 }
 
-@media (min-width: 750px) {
+@media (min-width: 960px) {
   .Contact--Section1--Container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    position: absolute;
+    top: 25%;
+    transform: translateY(-25%);
+    flex-direction: column;
   }
 
-  .Contact--Section1--Container > * {
-    width: calc(50% - 2rem);
+  .Contact--Details--Item{
+    flex-direction: row;
   }
+  .Contact--Details--Item svg{
+    width: unset;
+    margin-bottom: 0;
+    margin-right: 1.5rem;
+    display: inline;
+  }
+  /* .Contact--Section1--Container > * {
+    width: calc(50% - 2rem);
+  } */
 }

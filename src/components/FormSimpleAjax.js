@@ -94,27 +94,7 @@ class Form extends React.Component {
               <span>Lastname</span>
             </label>
           </div>
-          <fieldset>
-            <label className="Form--Label Form--Radio">
-              <input
-                className="Form--RadioInput"
-                type="radio"
-                name="gender"
-                value="male"
-                defaultChecked
-              />
-              <span>Male</span>
-            </label>
-            <label className="Form--Label Form--Radio">
-              <input
-                className="Form--RadioInput"
-                type="radio"
-                name="gender"
-                value="female"
-              />
-              <span>Female</span>
-            </label>
-          </fieldset>
+
           <label className="Form--Label">
             <input
               className="Form--Input Form--InputText"
@@ -135,9 +115,10 @@ class Form extends React.Component {
               <option disabled hidden>
                 Type of Enquiry
               </option>
-              <option>Need to know more</option>
-              <option>Found a bug</option>
-              <option>Want to say hello</option>
+              <option>Looking for a Photographer</option>
+              <option>General</option>
+              <option>Commission</option>
+              <option>Want to say let's go ride</option>
             </select>
           </label>
           <label className="Form--Label">
@@ -150,26 +131,22 @@ class Form extends React.Component {
             />
             <span>Message</span>
           </label>
-          <label className="Form--Label Form-Checkbox">
-            <input
-              className="Form--Input Form--Textarea Form--CheckboxInput"
-              name="newsletter"
-              type="checkbox"
-            />
-            <span>Get news updates</span>
-          </label>
+
           <div
             className="g-recaptcha"
             data-sitekey="6LfKN3kUAAAAAGIM1CbXmaRZx3LIh_W2twn1tzkA"
           />
           {!!subject && <input type="hidden" name="subject" value={subject} />}
           <input type="hidden" name="form-name" value={name} />
-          <input
-            className="Button Form--SubmitButton"
-            type="submit"
-            value="Enquire"
-            disabled={this.state.disabled}
-          />
+          <div className="taCenter w-100">
+            <input
+              className="Button Form--SubmitButton"
+              type="submit"
+              value="Enquire"
+              disabled={this.state.disabled}
+            />          
+          </div>
+
         </form>
       </Fragment>
     )
