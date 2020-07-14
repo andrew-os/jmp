@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   opacity: 1;
+  margin-left: 68px;
 }
 
 .Nav-active .Logo{
@@ -27,6 +28,8 @@
   .Logo{
     width: 100%;
     height:100%;
-    background-size: cover;
+    background-size: contain;
+    margin-left: 0;
   }
+  
 }

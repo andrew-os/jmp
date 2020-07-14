@@ -33,8 +33,8 @@
 @media screen and (min-width: 960px ) {
     .clip-inner-cont{
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 25%;
+        transform: translateY(-25%);
     
     }
 }

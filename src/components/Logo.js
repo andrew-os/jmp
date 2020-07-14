@@ -6,7 +6,6 @@ export default () => (
     className="Logo"
     style={{
         backgroundImage: `url(/images/logo-full.svg)`,
-        marginLeft: `68px`,
         marginRight: `0`,
     }}
   >

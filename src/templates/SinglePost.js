@@ -21,7 +21,7 @@ export const SinglePostTemplate = ({
 }) => (
   <main>
     <article
-      className="SinglePost section"
+      className="SinglePost section mt-5"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >

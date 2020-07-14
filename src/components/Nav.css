@@ -528,11 +528,18 @@
 .Nav-active{
   background:rgba(255,255,255, 0.8);
 }
+
+.Nav-active .Logo--Nav{
+  display: none;
+}
 .nav-cont .inner-cont-w{
   align-items: flex-start;
 }
 .logo-w{
-  display: none;
+  /* display: none; */
+  top: 50px;
+  height: 54px;
+  padding: 0 15px;
 }
 .NavLink:hover,
 .NavLink.active,
