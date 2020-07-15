@@ -21,11 +21,18 @@ export class Navigation extends Component {
   componentDidMount (){
     this.setState({ currentPath: this.props.location.pathname })
     window.addEventListener('scroll', this.handleScroll)
+   
   }
   componentWillUnmount ()  {
     window.removeEventListener('scroll', this.handleScroll)
   }
-  handleScroll = () => this.setState({ scrolling: true})
+  handleScroll = () => {
+    this.setState({ scrolling: true})
+
+    if(window.pageYOffset === 0) {
+      this.setState({ scrolling: false})
+    }
+  }
   handleMenuToggle = () => this.setState({ active: !this.state.active })
 
   // Only close nav if it is open
