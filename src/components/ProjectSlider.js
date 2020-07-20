@@ -91,7 +91,7 @@ export default class ProjectSlider extends Component {
         {images &&
           images.length > 0 && (
             <div>
-              <div className="Slider">
+              <div className="Slider slider--main">
                 <Slider 
                   asNavFor={this.state.nav2}
                   ref={slider => (this.slider1 = slider)}

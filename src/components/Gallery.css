@@ -55,9 +55,55 @@
 }
 
 /* Slick Overrides */
-.slick-list .BackgroundImage{
+/* .slick-list .BackgroundImage{
   position: relative;
+} */
+
+.slick-list .BackgroundImage img{
+  position: relative;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 }
+.slick-slide .BackgroundImage{
+  height: 100%;
+  width: 100%;
+}
+/* aspect ratios */
+/*
+aspect ratio  | padding-top value
+--------------|----------------------
+    1:1       |       100%
+    16:9      |       56.25%
+    4:3       |       75%
+    3:2       |       66.66%
+    8:5       |       62.5% 
+*/
+
+/* Project Slider */
+.slider--main .slick-slide div:not(.BackgroundImage){
+  padding-top: 56.25%;
+}
+
+
+.slider--thumbs .slick-slide div:not(.BackgroundImage){
+  padding-top: 100%;
+  padding-right: 7px;
+}
+.slider--thumbs .slick-list{
+  margin: 0 -7px 0 0;
+}
+
+
+.slick-slide div:not(.BackgroundImage) {
+  position: relative;
+/* height: 0; */
+  overflow: hidden;
+}
+
 .slick-next, .slick-prev{
   bottom: 0;
 }
