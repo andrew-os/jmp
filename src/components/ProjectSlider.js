@@ -2,7 +2,11 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { PhotoSwipe } from 'react-photoswipe'
-import Slider from "react-slick";
+
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
+// import Slider from "react-slick";
 import Image from './Image'
 
 
@@ -25,7 +29,33 @@ export const query = graphql`
   }
 `
 /*
+<div className="Slider slider--thumbs">
+                <Slider 
+                asNavFor={this.state.nav1}
+                ref={slider => (this.slider2 = slider)}
+                slidesToShow={4}
+                swipeToSlide={true}
+                focusOnSelect={true}
+                >
+                  {images.map((img, i) => (
 
+                    <div                         
+                    key={_kebabCase(img.alt) + '-' + i}
+                    onClick={() => this.isOpen(true, i)}
+                    >
+                      <Image
+                      resolutions="small"
+                      src={img.image}
+                      alt={img.alt}
+                      sizes={'320'}
+                      
+                      />
+
+                    </div>
+                  ))}                
+                </Slider>
+              
+              </div>
 */
 
 export default class ProjectSlider extends Component {
@@ -34,8 +64,8 @@ export default class ProjectSlider extends Component {
     isOpen: false,
     sliderImages: [],
     index: 0,
-    nav1: this.slider1,
-    nav2: this.slider2
+    // nav1: this.slider1,
+    // nav2: this.slider2
   }
 
   isOpen(isOpen, index) {
@@ -78,71 +108,51 @@ export default class ProjectSlider extends Component {
       }
     }
       this.setState({
-        nav1: this.slider1,
-        nav2: this.slider2
+        // nav1: this.slider1,
+        // nav2: this.slider2
       })
+
+      
   }
 
   render() {
     const { images } = this.props
-
     return (
       <Fragment>
         {images &&
           images.length > 0 && (
             <div>
               <div className="Slider slider--main">
+              <CarouselProvider
+                naturalSlideWidth={800}
+                naturalSlideHeight={450}
+                totalSlides={images.length}
+                >
                 <Slider 
-                  asNavFor={this.state.nav2}
-                  ref={slider => (this.slider1 = slider)}
-                  slidesToShow={1}
-                  arrows={false}
                 >
                   {images.map((image, index) => (
-
+                    <Slide index={index}>
                       <div                         
-                      key={_kebabCase(image.alt) + '-' + index}
-                      onClick={() => this.isOpen(true, index)}>
-                      <Image
-                      resolutions="large"
-                      src={image.image}
-                      alt={image.alt}
-                      sizes={'800'}
+                        key={_kebabCase(image.alt) + '-' + index}
+                        onClick={() => this.isOpen(true, index)}>
+                        <Image
+                        resolutions="large"
+                        src={image.image}
+                        alt={image.alt}
+                        sizes={'800'}
                       
                       
-                      />
+                        />
                       </div>
-                      
-                  ))}
-                </Slider>
+                      </Slide>    
+                    ))}
+                  </Slider>
+                <ButtonBack>Back</ButtonBack>
+                <ButtonNext>Next</ButtonNext>
+              </CarouselProvider>
+
               </div>
-              <div className="Slider slider--thumbs">
-                <Slider 
-                asNavFor={this.state.nav1}
-                ref={slider => (this.slider2 = slider)}
-                slidesToShow={4}
-                swipeToSlide={true}
-                focusOnSelect={true}
-                >
-                  {images.map((img, i) => (
-
-                    <div                         
-                    key={_kebabCase(img.alt) + '-' + i}
-                    onClick={() => this.isOpen(true, i)}
-                    >
-                      <Image
-                      resolutions="small"
-                      src={img.image}
-                      alt={img.alt}
-                      sizes={'320'}
-                      
-                      />
-
-                    </div>
-                  ))}                
-                </Slider>
               
-              </div>
             </div>
           )}
         {this.state.loaded &&
