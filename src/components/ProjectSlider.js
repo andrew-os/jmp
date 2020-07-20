@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { PhotoSwipe } from 'react-photoswipe'
 
-import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { CarouselProvider, Slider, Slide, Dot, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
 // import Slider from "react-slick";
@@ -148,8 +148,24 @@ export default class ProjectSlider extends Component {
                       </Slide>    
                     ))}
                   </Slider>
-                <ButtonBack>Back</ButtonBack>
-                <ButtonNext>Next</ButtonNext>
+                <ButtonBack className="slider-button"></ButtonBack>
+                <ButtonNext className="slider-button"></ButtonNext>
+
+                <div className="slider slider--thumbs">
+                {images.map((image, index) => (
+                  <Dot 
+                    slide={index}
+                    key={index}
+                  >
+                    <Image
+                      resolutions="small"
+                      src={image.image}
+                      alt={image.alt}
+                    />
+                  </Dot>
+                ))}
+                
+                </div>
               </CarouselProvider>
 
               </div>
