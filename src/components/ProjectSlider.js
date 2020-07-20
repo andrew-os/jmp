@@ -127,6 +127,7 @@ export default class ProjectSlider extends Component {
                 naturalSlideWidth={800}
                 naturalSlideHeight={450}
                 totalSlides={images.length}
+                infinite={true}
                 >
                 <Slider 
                 >

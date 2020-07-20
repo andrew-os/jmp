@@ -2,7 +2,10 @@ import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import { PhotoSwipe } from 'react-photoswipe'
-import Slider from "react-slick";
+
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+
 import Image from './Image'
 
 
@@ -78,36 +81,43 @@ export default class GallerySlider extends Component {
 
   render() {
     const { images } = this.props
-    const settings = {
-      dots: false,
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-    }
+
     return (
       <Fragment>
         {images &&
           images.length > 0 && (
             <div className="Slider">
-              <Slider {...settings}>
+              <CarouselProvider
+                naturalSlideWidth={1372}
+                naturalSlideHeight={708}
+                totalSlides={images.length}
+                infinite={true}
+              >
+              
+              <Slider>
                 {images.map((image, index) => (
-
-                    <div                         
-                    key={_kebabCase(image.alt) + '-' + index}
-                    onClick={() => this.isOpen(true, index)}>
-                    <Image
-                    resolutions="large"
-                    src={image.image}
-                    alt={image.alt}
-                    
-                    
-                    />
-                    </div>
-                    
-                ))}
+                    <Slide index={index}>
+                      <div                         
+                      key={_kebabCase(image.alt) + '-' + index}
+                      onClick={() => this.isOpen(true, index)}>
+                      <Image
+                      resolutions="large"
+                      src={image.image}
+                      alt={image.alt}
+                      
+                      
+                      />
+                      </div>
+                    </Slide>       
+                  ))}
+               
               </Slider>
-            </div>
+              <ButtonBack>Back</ButtonBack>
+              <ButtonNext>Next</ButtonNext>
+            </CarouselProvider>
+          </div>
           )}
+
         {this.state.loaded &&
           this.state.sliderImages.length > 0 && (
             <PhotoSwipe
