@@ -105,11 +105,3 @@ aspect ratio  | padding-top value
   border-bottom: 5px solid black;
 }
 
-.slider--thumbs .carousel__dot{
-  height: 120px;
-  width: 120px;
-  position: relative;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
