@@ -28,7 +28,7 @@ export const HomePageTemplate = ({
           </article>        
         </div>
         
-        <GallerySlider images={slidegallery} />
+        <GallerySlider className="Slider home--slider" images={slidegallery} />
 
 
         

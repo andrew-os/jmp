@@ -112,8 +112,11 @@ export default class GallerySlider extends Component {
                   ))}
                
               </Slider>
-              <ButtonBack className="slider-button"></ButtonBack>
-              <ButtonNext className="slider-button"></ButtonNext>
+              <div className="slider-button-w">
+                <ButtonBack className="slider-button"></ButtonBack>
+                <ButtonNext className="slider-button"></ButtonNext>              
+              </div>
+
             </CarouselProvider>
           </div>
           )}

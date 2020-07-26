@@ -8,11 +8,15 @@
 .slider-content{
     padding: 0 35px;
 }
+.slider-button-w{
+    justify-content: flex-start;
+    margin-top: 10px;
+}
 @media screen and (min-width: 768px){
 
     .slider-content-w{
         position: absolute;
-        bottom: 0;
+        bottom: 40px;
         right: 0;
         text-align: right;
     }
@@ -20,26 +24,17 @@
         padding-right: 12.5%;
     } */
 
+    .slider-button-w{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
 
-    .Home .slick-arrow{
-        bottom: -40px;
-        top: unset;
-        left: unset;
-    }
-    .Home .slick-prev{
-        right: 50px;
-    }
-    .Home .slick-next{
-        right: 10px;
-    }
 
 }  
 
 @media screen and (min-width: 1000px){
-    .Home .slick-slide img{
-        height: 72vh;
-        width: 100%;
-    }
+ 
 
     .Home .section--slider{
         padding-top: 10%;
