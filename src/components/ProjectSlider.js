@@ -64,6 +64,7 @@ export default class ProjectSlider extends Component {
     isOpen: false,
     sliderImages: [],
     index: 0,
+    activeSlide: 0
     // nav1: this.slider1,
     // nav2: this.slider2
   }
@@ -115,6 +116,20 @@ export default class ProjectSlider extends Component {
       
   }
 
+  // incrementActiveSlide() {
+  //   const { activeSlide } = this.state;
+  //   this.setState({
+  //     activeSlide: activeSlide + 1,
+  //   });
+  // }
+
+  // decrementActiveSlide() {
+  //   const { activeSlide } = this.state;
+  //   this.setState({
+  //     activeSlide: activeSlide - 1,
+  //   });
+  // }
+
   render() {
     const { images } = this.props
     return (
@@ -132,7 +147,11 @@ export default class ProjectSlider extends Component {
                 <Slider 
                 >
                   {images.map((image, index) => (
-                    <Slide index={index}>
+                    <Slide 
+                    index={index}
+                    key={index}
+                    
+                    >
                       <div                         
                         key={_kebabCase(image.alt) + '-' + index}
                         onClick={() => this.isOpen(true, index)}>

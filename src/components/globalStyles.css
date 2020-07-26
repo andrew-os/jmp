@@ -23,7 +23,8 @@
 }
 
 ::-webkit-scrollbar {
-  width: 0.4rem;
+  width: 8px;
+  height: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -31,12 +32,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary);
+  background-color: rgba(202,202,202, 0.85);
+  border-radius: 20px;
+  border: solid 3px rgba(202,202,202, 0.85);
 }
 
 ::selection {
   background: rgba(0, 194, 189, 0.6);
 }
+*{
+  scrollbar-width: thin;
+  scrollbar-color: var(--darkGrey) transparent;
+}
+
 
 html {
   box-sizing: border-box;
