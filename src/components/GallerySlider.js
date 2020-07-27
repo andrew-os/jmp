@@ -86,10 +86,10 @@ export default class GallerySlider extends Component {
       <Fragment>
         {images &&
           images.length > 0 && (
-            <div className="Slider">
+            <div className="Slider gallery--slider">
               <CarouselProvider
-                naturalSlideWidth={1372}
-                naturalSlideHeight={708}
+                naturalSlideWidth={1400}
+                naturalSlideHeight={560}
                 totalSlides={images.length}
                 infinite={true}
               >

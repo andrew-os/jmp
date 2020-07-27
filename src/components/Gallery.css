@@ -66,19 +66,12 @@ aspect ratio  | padding-top value
     8:5       |       62.5% 
 */
 
+.Slider{
+  cursor: pointer;
+}
 /* Project Slider */
 
-.Slider .slick-next:before, .slick-prev:before{
-  content: '' !important;
-  color: #000;
-  font-size: 30px;
-  opacity: 1;
-  transform: rotate(-45deg);
-  width: 20px;
-  height: 20px;
-  display: block;
-  
-}
+
 
 
 .slider-button{
@@ -96,6 +89,11 @@ aspect ratio  | padding-top value
   height: 20px;
   display: block;
 }
+.slider-button:focus{
+  outline-style: unset;
+  outline-color: unset;
+  outline-width: 0px;
+}
 .carousel__back-button:before{
   border-left: 5px solid black;
   border-top: 5px solid black;
@@ -103,5 +101,17 @@ aspect ratio  | padding-top value
 .carousel__next-button:before{
   border-right: 5px solid black;
   border-bottom: 5px solid black;
+}
+
+
+/* HOME SLIDER */
+
+.gallery--slider .carousel__inner-slide .BackgroundImage{
+  height: 100%;
+  width: 100%;
+}
+
+.gallery--slider .carousel__inner-slide img{
+  visibility: hidden;
 }
 

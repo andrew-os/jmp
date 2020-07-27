@@ -167,8 +167,11 @@ export default class ProjectSlider extends Component {
                       </Slide>    
                     ))}
                   </Slider>
-                <ButtonBack className="slider-button"></ButtonBack>
-                <ButtonNext className="slider-button"></ButtonNext>
+                  <div className="slider-button-w">
+                    <ButtonBack className="slider-button"></ButtonBack>
+                    <ButtonNext className="slider-button"></ButtonNext>
+                  </div>
+                
 
                 <div className="slider slider--thumbs">
                 {images.map((image, index) => (

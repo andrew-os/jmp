@@ -6,8 +6,11 @@ import { ChevronLeft } from 'react-feather'
 import Content from '../components/Content'
 import Layout from '../components/Layout'
 import ProjectSlider from '../components/ProjectSlider'
+
 import Testimonial from '../components/Testimonial'
 import './SinglePost.css'
+
+
 
 export const SinglePostTemplate = ({
   title,
@@ -19,6 +22,7 @@ export const SinglePostTemplate = ({
   testimonials = [],
   categories = []
 }) => (
+  
   <main>
     <article
       className="SinglePost section mt-5"
@@ -39,7 +43,8 @@ export const SinglePostTemplate = ({
               </div>            
             </div>
 
-            <div className="lg:gr-6 gr-12 lg:order-1 order-2">
+            <div className="lg:gr-6 gr-12 lg:order-1 order-2 Project--Content">
+              
               {title && (
                 <h1 className="SinglePost--Title" itemProp="title">
                   {title}
@@ -77,6 +82,7 @@ export const SinglePostTemplate = ({
               <div className="SinglePost--InnerContent">
                 <Content source={body} />
               </div>
+
             </div>
 
 
@@ -128,6 +134,7 @@ export const SinglePostTemplate = ({
 // Export Default SinglePost for front-end
 const SinglePost = ({ data: { post, allPosts } }) => {
   const thisEdge = allPosts.edges.find(edge => edge.node.id === post.id)
+  
   return (
     <Layout
       meta={post.frontmatter.meta || false}

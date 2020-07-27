@@ -308,8 +308,14 @@ blockquote {
     width: 100%;
   }
 }
+@media screen and (min-width: 865px){
+  .container{
+    max-width: 816px;
+    width: 100%;
+  }
+}
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 940px){
   .container{
     max-width: 960px;
     width: calc(100% - 20px);

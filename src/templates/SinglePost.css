@@ -53,7 +53,11 @@
 .SinglePost--InnerContent {
   /* padding: 0 8rem; */
 }
-
+@media only screen and (min-width:1000px){
+  .Project--Content{
+    min-height: 450px;
+  }
+}
 @media screen and (max-width: 750px) {
   .SinglePost--InnerContent {
     padding: 0;

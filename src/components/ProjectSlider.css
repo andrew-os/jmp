@@ -1,13 +1,23 @@
 .ProjectSlider--w .BackgroundImage img{
     width: 100%;
+    visibility: hidden;
 }
-.ProjectSlider--w .Slider{
+/* .ProjectSlider--w .Slider{
     max-height: 500px;
-}
+} */
 
 .ProjectSlider--w .slider--thumbs{
     position: relative;
 }
+
+.slider--main .carousel__inner-slide .BackgroundImage{
+    height: 100%;
+    width: 100%;
+  }
+  
+  .slider--main .carousel__inner-slide img{
+    visibility: hidden;
+  }
 
 @media screen and (min-width: 1000px){
     .ProjectSlider--w .slider--thumbs{

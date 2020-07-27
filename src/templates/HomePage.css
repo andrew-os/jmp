@@ -9,9 +9,15 @@
     padding: 0 35px;
 }
 .slider-button-w{
-    justify-content: flex-start;
+    display: flex;
+    justify-content: flex-end;
     margin-top: 10px;
 }
+
+.Home .section--slider{
+    padding-top: 15%;
+}
+
 @media screen and (min-width: 768px){
 
     .slider-content-w{
@@ -23,19 +29,12 @@
     /* .slider-content{
         padding-right: 12.5%;
     } */
-
-    .slider-button-w{
-        display: flex;
-        justify-content: flex-end;
-        
-    }
-
+  
 
 }  
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 960px){
  
-
     .Home .section--slider{
         padding-top: 10%;
     }
