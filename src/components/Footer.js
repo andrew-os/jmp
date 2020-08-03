@@ -14,7 +14,7 @@ export default () => (
     <footer className="footer">
       <div className="container taCenter">
         <span>
-          © Copyright {new Date().getFullYear()} JMP. All rights reserved. Crafted by <a href="https://andrewbe.me" target="_blank">andrewbeme</a>
+          © Copyright {new Date().getFullYear()} JMP. All rights reserved. Crafted by <a href="https://andrewbe.me" target="_blank" rel="noreferrer">andrewbeme</a>
         </span>
       </div>
     </footer>

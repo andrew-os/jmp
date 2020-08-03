@@ -90,7 +90,7 @@ h6 {
 }
 
 h1.xl{
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
 }
 
@@ -187,7 +187,7 @@ blockquote {
 
 /* Layout */
 
-.section {
+.section{
   width: 100%;
   padding: 5rem 0;
   /* border-bottom: 1px solid #f1f1f1; */
@@ -205,10 +205,12 @@ blockquote {
   padding: 0;
 }
 
+
+
 @media (max-width: 600px) {
-  .section {
+  .section{
     width: 100%;
-    padding: 5rem 0;
+    padding: 8.5rem 0;
   }
   .section.thick {
     padding: 7rem 0;
@@ -216,6 +218,7 @@ blockquote {
   .section.thin {
     padding: 1.5rem 0;
   }
+  
 }
 
 
@@ -294,6 +297,10 @@ blockquote {
   margin-top: 50px;
 }
 
+.mt-page{
+  margin-top: 35%;
+}
+
 /* Grids and widths */
 .container{
   margin: 0 auto;
@@ -301,11 +308,37 @@ blockquote {
   width: calc(100% - 20px);
   /* width: calc(100% - 130px); */
 }
+
+.img-top--section{
+  padding: 2.5rem 0;
+}
+
+/* LRG MOB */
+@media screen and (min-width: 600px){
+  .mt-page{
+    margin-top: 25%;
+  }
+  .img-top--section{
+    padding: 4.5rem 0;
+  }
+}
+
 /* tablet */
 @media screen and (min-width: 768px){
   .container{
     max-width: 720px;
     width: 100%;
+  }
+
+  h1.xl{
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+  .mt-page{
+    margin-top: 110px;
+  }
+  .img-top--section{
+    padding: 5.3rem 0;
   }
 }
 @media screen and (min-width: 865px){
@@ -342,10 +375,21 @@ blockquote {
   h1.xl{
     font-size: 7.2rem;
   }
+  .container{
+    max-width: 1580px;
+  }
+}
+
+@media screen and (min-width: 1900px){
+  .container{
+    max-width: 1820px;
+  }
 }
 /* 4K */
 @media screen and (min-width: 2100px){
-
+  .container{
+    max-width: 2040px;
+  }
 }
 .row{
   display: flex;

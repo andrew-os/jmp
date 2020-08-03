@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Location } from '@reach/router'
 import { Link } from 'gatsby'
-import { FontAwesomeIcon, far } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import Logo from './Logo'
@@ -74,7 +74,7 @@ className={`Nav--Group ${
 </div>
 <NavLink to="/default/">Default</NavLink>
  
-
+subNav, = this.props
   toggleSubNav = subNav =>
     this.setState({
       activeSubNav: this.state.activeSubNav === subNav ? false : subNav
@@ -82,7 +82,7 @@ className={`Nav--Group ${
 */
   render() {
     const { active, scrolling } = this.state,
-      { subNav, email, phone } = this.props,
+      { email, phone } = this.props,
       NavLink = ({ to, className, children, ...props }) => (
         <Link
           to={to}

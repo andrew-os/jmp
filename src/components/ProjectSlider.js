@@ -154,7 +154,9 @@ export default class ProjectSlider extends Component {
                     >
                       <div                         
                         key={_kebabCase(image.alt) + '-' + index}
-                        onClick={() => this.isOpen(true, index)}>
+                        onClick={() => this.isOpen(true, index)}
+                        role="button"
+                        tabIndex="-1">
                         <Image
                         resolutions="large"
                         src={image.image}

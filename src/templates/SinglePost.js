@@ -23,9 +23,9 @@ export const SinglePostTemplate = ({
   categories = []
 }) => (
   
-  <main>
+  <main className="img-top--section">
     <article
-      className="SinglePost section mt-5"
+      className="SinglePost section"
       itemScope
       itemType="http://schema.org/BlogPosting"
     >
@@ -46,7 +46,7 @@ export const SinglePostTemplate = ({
             <div className="lg:gr-6 gr-12 lg:order-1 order-2 Project--Content">
               
               {title && (
-                <h1 className="SinglePost--Title" itemProp="title">
+                <h1 className="SinglePost--Title mt-1" itemProp="title">
                   {title}
                 </h1>
               )}

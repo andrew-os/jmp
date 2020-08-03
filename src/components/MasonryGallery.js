@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react'
-import PropTypes from 'prop-types'
+
 import { PhotoSwipe } from 'react-photoswipe'
 import { graphql } from 'gatsby'
 import Masonry from 'react-masonry-css'
 import Image from './Image'
 
-import _kebabCase from 'lodash/kebabCase'
+// import _kebabCase from 'lodash/kebabCase'
 
 import 'react-photoswipe/lib/photoswipe.css'
 import './MasonryGallery.css'

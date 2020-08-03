@@ -79,6 +79,7 @@ class Form extends React.Component {
                 type="text"
                 placeholder="Firstname"
                 name="firstname"
+                role="input"
                 required
               />
               <span>Firstname</span>
@@ -89,6 +90,7 @@ class Form extends React.Component {
                 type="text"
                 placeholder="Lastname"
                 name="lastname"
+                role="input"
                 required
               />
               <span>Lastname</span>

@@ -15,9 +15,13 @@
 }
 
 .Home .section--slider{
-    padding-top: 15%;
+    padding-top: 35%;
 }
-
+@media screen and (min-width: 600px){
+    .Home .section--slider{
+        padding-top: 25%;
+    }
+}
 @media screen and (min-width: 768px){
 
     .slider-content-w{
@@ -30,7 +34,9 @@
         padding-right: 12.5%;
     } */
   
-
+    .Home .section--slider{
+        padding-top: 15%;
+    }
 }  
 
 @media screen and (min-width: 960px){

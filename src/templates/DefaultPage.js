@@ -27,7 +27,7 @@ export const DefaultPageTemplate = ({
   featuredImage,
   body
 }) => (
-  <div className="mt-5">
+  <div className="mt-page md:mt-5">
 
     <ClipBG background={featuredImage}>
       <div className="bg-w"></div>

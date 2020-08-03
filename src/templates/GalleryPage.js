@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 
-import Content from '../components/Content'
 import Layout from '../components/Layout'
 import MasonryGallery from '../components/MasonryGallery'
 
@@ -18,14 +17,8 @@ import MasonryGallery from '../components/MasonryGallery'
 
 // Export Template for use in CMS preview
 export const GalleryPageTemplate = ({ title, subtitle, featuredImage, body, gallery }) => (
-  <main className="gallery">
+  <main className="gallery img-top--section">
 
-
-    <section className="section">
-      <div className="container">
-        <Content source={body} />
-      </div>
-    </section>
 
     <section className="section">
       <MasonryGallery images={gallery}/>
