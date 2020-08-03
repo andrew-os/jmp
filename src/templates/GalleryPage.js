@@ -17,7 +17,7 @@ import MasonryGallery from '../components/MasonryGallery'
 
 // Export Template for use in CMS preview
 export const GalleryPageTemplate = ({ title, subtitle, featuredImage, body, gallery }) => (
-  <main className="gallery img-top--section">
+  <main className="gallery mt-3 xs:mt-7 md:mt-5">
 
 
     <section className="section">

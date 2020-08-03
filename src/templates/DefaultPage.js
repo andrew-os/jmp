@@ -27,35 +27,37 @@ export const DefaultPageTemplate = ({
   featuredImage,
   body
 }) => (
-  <div className="mt-page md:mt-5">
+  <main className="DefaultPage mt-3 xs:mt-7 md:mt-5">
+    <section className="section">
 
-    <ClipBG background={featuredImage}>
-      <div className="bg-w"></div>
-    </ClipBG>
-
-
-    <div className="clip-content">
+      <ClipBG background={featuredImage}>
+        <div className="bg-w"></div>
+      </ClipBG>
 
 
-      <div className="clip-inner-cont">
-        <div className="clip-inner-cont-w">
-          <div className="container">
-            <div className="row row-align-btween">
-              <div className="md:gr-6 gr-12">
-                <header className="mt-1">
-                  <h1>{title}</h1>
-                </header>
-                <Content source={body} />
-            
-              </div>
-              <div className="md:gr-4 gr-12"></div>
-            </div>  
+      <div className="clip-content">
+
+
+        <div className="clip-inner-cont">
+          <div className="clip-inner-cont-w">
+            <div className="container">
+              <div className="row row-align-btween">
+                <div className="md:gr-6 gr-12">
+                  <header className="mt-1">
+                    <h1>{title}</h1>
+                  </header>
+                  <Content source={body} />
+              
+                </div>
+                <div className="md:gr-4 gr-12"></div>
+              </div>  
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  
-  </div>
+    
+    </section>
+  </main>
 
 )
 

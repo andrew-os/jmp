@@ -23,7 +23,7 @@ export const SinglePostTemplate = ({
   categories = []
 }) => (
   
-  <main className="img-top--section">
+  <main className="mt-3 xs:mt-7 md:mt-5">
     <article
       className="SinglePost section"
       itemScope

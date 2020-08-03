@@ -15,10 +15,10 @@ export const HomePageTemplate = ({
   body,
   slidegallery
  }) => (
-  <main className="Home">
+  <main className="Home mt-3 xs:mt-7 md:mt-5">
 
 
-    <section className="section section--slider">
+    <section className="section">
       <div className="container relative">
 
         <div className="slider-content-w">

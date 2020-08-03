@@ -92,6 +92,7 @@ h6 {
 h1.xl{
   font-size: 3rem;
   text-transform: uppercase;
+  line-height: 1.35;
 }
 
 
@@ -286,15 +287,23 @@ blockquote {
 .mb-0{
   margin-bottom: 0;
 }
-
+.mt-0{
+  margin-top: 0;
+}
 .mt-1{
   margin-top: 13px;
+}
+.mt-2{
+  margin-top: 25px;
 }
 .mt-3{
   margin-top: 32px;
 }
 .mt-5{
   margin-top: 50px;
+}
+.mt-7{
+  margin-top: 72px;
 }
 
 .mt-page{
@@ -321,6 +330,10 @@ blockquote {
   .img-top--section{
     padding: 4.5rem 0;
   }
+
+  .xs\:mt-7{
+    margin-top: 72px;
+  }
 }
 
 /* tablet */
@@ -333,6 +346,7 @@ blockquote {
   h1.xl{
     font-size: 5rem;
     text-transform: uppercase;
+    line-height: 48px;
   }
   .mt-page{
     margin-top: 110px;
@@ -478,18 +492,24 @@ blockquote {
     h6{
       text-align: left;
     }
-    /* Utility */
+  /* Utility */
     .md\:block{
       display: block;
     }
     .md\:hidden{
       display: none;
     }
-    /*Margins + Paddings  */
+  /*Margins + Paddings  */
     .md\:mb-0{
       margin-bottom: 0;
     }
   
+    .md\:mt-0{
+      margin-top: 0;
+    }
+    .md\:mt-3{
+      margin-top: 32px;
+    }
     .md\:mt-5{
       margin-top: 50px;
     }

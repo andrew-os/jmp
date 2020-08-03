@@ -33,7 +33,14 @@ export const byCategory = (posts, title, contentType) => {
     post.categories.filter(cat => cat.category === title).length
   return isCategory ? posts.filter(byCategory) : posts
 }
-
+/*          {!!postCategories.length && (
+  <section className="section thin">
+  <div className="container">
+     
+  </div>
+</section>
+)}
+*/
 // Export Template for use in CMS preview
 export const BlogIndexTemplate = ({
   title,
@@ -62,17 +69,11 @@ export const BlogIndexTemplate = ({
       }
 
       return (
-        <main className="Blog">
-          {!!postCategories.length && (
-            <section className="section thin">
-              <div className="container">
-                 
-              </div>
-            </section>
-          )}
+        <main className="Blog mt-3 xs:mt-7 md:mt-5">
+
 
           {!!posts.length && (
-            <section className="section">
+            <section className="section mt-2 md:mt-0">
               <div className="container">
                 <PostSection posts={filteredPosts} />
               </div>

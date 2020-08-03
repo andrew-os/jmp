@@ -531,6 +531,7 @@
 
 .Nav-active .Logo--Nav{
   display: none;
+  height: 0;
 }
 .nav-cont .inner-cont-w{
   align-items: flex-start;

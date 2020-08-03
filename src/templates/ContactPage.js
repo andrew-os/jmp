@@ -33,7 +33,7 @@ export const ContactPageTemplate = ({
   email,
   locations
 }) => (
-  <main className="Contact mt-5">
+  <main className="Contact mt-3 md:mt-5">
 
   <ClipBG background={featuredImage}>
     <div className="bg-w"></div>
@@ -45,7 +45,7 @@ export const ContactPageTemplate = ({
       <div className="row">
         <div className="gr-12">
           
-          <h1 className="mt-3">{title}</h1>
+          <h1 className="mt-0 md:mt-3">{title}</h1>
           
           {subtitle.length > 0 &&
             <p>{subtitle}</p>
