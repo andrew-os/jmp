@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import Masonry from 'react-masonry-css'
 import Image from './Image'
 
-// import _kebabCase from 'lodash/kebabCase'
+import _kebabCase from 'lodash/kebabCase'
 
 import 'react-photoswipe/lib/photoswipe.css'
 import './MasonryGallery.css'
@@ -90,7 +90,11 @@ export default class MasonryGallery extends Component{
                 >
                   {images.map((image, index) => (
 
-                      <div key={index}>
+                      <div key={index}
+                        key={_kebabCase(image.alt) + '-' + index}
+                        onClick={() => this.isOpen(true, index)}
+                        className="masonry--img"
+                      >
                         <Image
                           src={image.image}
                           alt={image.alt}

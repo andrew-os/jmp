@@ -18,6 +18,7 @@
 /* TEMP FIX Really need to sort this image stuff out */  
 .Masonry .BackgroundImage{
     position: relative;
+    cursor: pointer;
 }
 .Masonry .BackgroundImage > img{
     width: 100%;
