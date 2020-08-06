@@ -35,7 +35,14 @@ export default class GallerySlider extends Component {
     loaded: false,
     isOpen: false,
     sliderImages: [],
-    index: 0
+    index: 0,
+    windowWidth: 0,
+    
+  }
+
+  updateDimensions(){
+    let windowWidth = typeof window !== "undefined" ? window.innerWidth : 0;
+    this.setState({ windowWidth})
   }
 
   isOpen(isOpen, index) {
@@ -77,52 +84,104 @@ export default class GallerySlider extends Component {
         loopCount++
       }
     }
+    this.updateDimensions()
+    window.addEventListener('resize', this.updateDimensions())
+  }
+  componentDidUnmount(){
+    window.removeEventListener("resize", this.updateDimensions())
   }
 
   render() {
     const { images } = this.props
-
+    const { windowWidth } = this.state
+    const screenSize = {
+      showDesktop: windowWidth > 768,
+    }
+    console.log(windowWidth)
     return (
       <Fragment>
         {images &&
           images.length > 0 && (
             <div className="Slider gallery--slider">
+
+              {screenSize.showDesktop ?  (
+                <CarouselProvider
+                  naturalSlideWidth={1400}
+                  naturalSlideHeight={560}
+                  totalSlides={images.length}
+                  infinite={true}
+                >
+                  <Slider>
+                    {images.map((image, index) => (
+                        <Slide index={index}>
+                          <div                         
+                          key={_kebabCase(image.alt) + '-' + index}
+                          onClick={() => this.isOpen(true, index)}
+                          role="button"
+                          tabIndex="-1">
+                          
+                          <Image
+                          resolutions="large"
+                          src={image.image}
+                          alt={image.alt}
+                          
+                          
+                          />
+                          </div>
+                        </Slide>       
+                      ))}
+                  
+                  </Slider>
+                  <div className="slider-button-w">
+                    <ButtonBack className="slider-button"></ButtonBack>
+                    <ButtonNext className="slider-button"></ButtonNext> 
+                              
+                  </div>
+
+              </CarouselProvider>              
+              ) : (
               <CarouselProvider
-                naturalSlideWidth={1400}
+                naturalSlideWidth={640}
                 naturalSlideHeight={560}
                 totalSlides={images.length}
                 infinite={true}
               >
-              
-              <Slider>
-                {images.map((image, index) => (
-                    <Slide index={index}>
-                      <div                         
-                      key={_kebabCase(image.alt) + '-' + index}
-                      onClick={() => this.isOpen(true, index)}
-                      role="button"
-                      tabIndex="-1">
-                      
-                      <Image
-                      resolutions="large"
-                      src={image.image}
-                      alt={image.alt}
-                      
-                      
-                      />
-                      </div>
-                    </Slide>       
+                <Slider>
+                  {images.map((image, index) => (
+                      <Slide index={index}>
+                        <div                         
+                        key={_kebabCase(image.alt) + '-' + index}
+                        onClick={() => this.isOpen(true, index)}
+                        role="button"
+                        tabIndex="-1">
+                        
+                        <Image
+                        resolutions="large"
+                        src={image.image}
+                        alt={image.alt}
+                        
+                        
+                        />
+                        </div>
+                      </Slide>       
                   ))}
-               
-              </Slider>
+                
+                </Slider>
               <div className="slider-button-w">
                 <ButtonBack className="slider-button"></ButtonBack>
-                <ButtonNext className="slider-button"></ButtonNext>              
+                <ButtonNext className="slider-button"></ButtonNext> 
+                          
               </div>
 
-            </CarouselProvider>
-          </div>
-          )}
+            </CarouselProvider> 
+                
+          )
+        }
+              
+              
+
+      </div>
+        )}
 
         {this.state.loaded &&
           this.state.sliderImages.length > 0 && (
