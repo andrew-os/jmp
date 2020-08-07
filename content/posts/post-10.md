@@ -5,6 +5,11 @@ status: Published
 date: 2018-03-28T00:00:00.000Z
 featuredImage: 'https://ucarecdn.com/689db1a4-3291-478d-86c8-8688d9daaf97/'
 excerpt: This is an excerpt of Post Two
+projectgallery:
+  - alt: man mountain
+    image: 'https://ucarecdn.com/c5250b3d-1972-45e2-8dd3-020637dfd869/'
+  - alt: People mountain
+    image: 'https://ucarecdn.com/8bb0fee1-62f3-4ab6-8fcc-d6653d581af2/'
 clients:
   - logo: 'https://ucarecdn.com/2c57a81d-a824-4afb-b37b-702de16e4729/'
   - logo: 'https://ucarecdn.com/8568e164-b337-4d23-bad8-a7629e34f651/'
