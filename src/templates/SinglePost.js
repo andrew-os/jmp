@@ -97,11 +97,15 @@ export const SinglePostTemplate = ({
         </div>
       </div>
 
-
+      
       <div className="container lg:mt-5">
         <div className="row">
           <div className="gr-12">
+         
+          {testimonials && (
             <Testimonial quote={testimonials} />
+          )}
+           
           </div>
     
         </div>
