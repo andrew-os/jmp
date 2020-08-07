@@ -10,11 +10,7 @@ projectgallery:
     image: 'https://ucarecdn.com/c5250b3d-1972-45e2-8dd3-020637dfd869/'
   - alt: People mountain
     image: 'https://ucarecdn.com/8bb0fee1-62f3-4ab6-8fcc-d6653d581af2/'
-clients:
-  - logo: 'https://ucarecdn.com/2c57a81d-a824-4afb-b37b-702de16e4729/'
-  - logo: 'https://ucarecdn.com/8568e164-b337-4d23-bad8-a7629e34f651/'
-  - logo: 'https://ucarecdn.com/63596b4d-2f62-483e-9782-2536dd2023a6/'
-  - logo: 'https://ucarecdn.com/e8a74ebf-e549-4314-b360-1acced85e149/'
+clients: []
 categories:
   - category: Updates
 meta:
