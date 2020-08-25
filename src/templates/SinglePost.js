@@ -20,6 +20,7 @@ export const SinglePostTemplate = ({
   nextPostURL,
   prevPostURL,
   testimonials = [],
+  clients = [],
   categories = []
 }) => (
   
