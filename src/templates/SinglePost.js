@@ -8,6 +8,8 @@ import Layout from '../components/Layout'
 import ProjectSlider from '../components/ProjectSlider'
 
 import Testimonial from '../components/Testimonial'
+import Clients from '../components/Clients'
+
 import './SinglePost.css'
 
 
@@ -38,7 +40,7 @@ export const SinglePostTemplate = ({
 
           <div className="row">
 
-            <div className="lg:gr-6 gr-12 lg:order-2 order-1">
+            <div className="lg:gr-6 gr-12 lg:order-2 order-1 lg:mt-8">
               <div className="ProjectSlider--w">
                 <ProjectSlider images={projectgallery}/>
               </div>            
@@ -105,6 +107,13 @@ export const SinglePostTemplate = ({
          
           {testimonials && (
             <Testimonial quote={testimonials} />
+          )}
+           
+          </div>
+          <div className="gr-12">
+         
+          {clients && (
+            <Clients client={clients} />
           )}
            
           </div>
@@ -180,6 +189,9 @@ export const pageQuery = graphql`
         testimonials{
           testimonials
           quoted
+        }
+        clients{
+          logo
         }
       }
     }

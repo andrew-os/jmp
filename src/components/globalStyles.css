@@ -577,9 +577,14 @@ blockquote {
   .lg\:mb-0{
     margin-bottom: 0;
   }
-
+  .lg\:mt-3{
+    margin-top: 32px;
+  }
   .lg\:mt-5{
     margin-top: 50px;
+  }
+  .lg\:mt-8{
+    margin-top: 80px;
   }
 
 

@@ -3,8 +3,8 @@ import React from 'react'
 import './Testimonial.css'
 
 export default (props) => (
-    <div className="testimonial taCenter">
-        <h2 className="h1">Testimonial</h2>
+    <div className="testimonial taCenter lg:mt-3">
+        <h2 className="h1 taCenter">Testimonial</h2>
 
         <article className="testimonial-content">
             <ul className="no-list">{
