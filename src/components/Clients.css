@@ -1,7 +1,21 @@
-/* .client-list{
+.client-list{
     display: flex;
-    justify-content: space-evenly;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+.client-list--item{
+    width: 100px;
+    margin: 0 6px;
+}
+@media screen and (min-width: 600px){
+    .client-list{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+/* 
 .client-list--item{
     position: relative;
     width: 120px;

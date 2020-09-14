@@ -1,10 +1,16 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
 import './Clients.css'
 
-import Img from './Img'
+const ClientLogo = styled.div`
+    background: ${client => `url(${client.logo}) no-repeat top center`};
+    background-size: cover;
+    position: relative;
+`
 
 export default (props) => (
+   
     <div className="clients taCenter lg:mt-1">
         <h2 className="h2 taCenter">Clients</h2>
 
@@ -12,15 +18,16 @@ export default (props) => (
             <ul className="no-list client-list">{
                 props.client.map((client) =>
                     <li 
-                        className="client-list--item"
+                        className="client-list--item aspect-ratio ratio--100"
                         key={client.logo}>
-  
-                        <Img
+                        <div 
+                            className="bg-img ratio--inner"
+                            style={{backgroundImage:'url('+client.logo+')'}}
                         
-                        src={client.logo}
-                        alt={client.logo} 
+                        >
+                            
+                        </div>
 
-                        />
                     </li>
                 )}
             </ul>
